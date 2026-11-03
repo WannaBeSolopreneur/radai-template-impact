@@ -36,6 +36,283 @@
       <ol class="actions" id="action-list"></ol>
     </section>
 
+    <section id="how" class="how">
+      <h2>How it's built</h2>
+      <p>The tiles and the action list are columns in the warehouse. This page only reads them.</p>
+
+      <h3>Path</h3>
+      <ol class="arch">
+        <li>
+          <strong>Generator</strong>
+          <span>Python in rad_model. Seed 20261103. behavior.yml for studies. commercial.yml for accounts, deals, spend, and goals.</span>
+        </li>
+        <li>
+          <strong>Raw tables</strong>
+          <span>DuckDB schema raw. studies, customers, accounts, opportunities, marketing_spend, goals, quarter, generation_meta.</span>
+        </li>
+        <li>
+          <strong>Staging</strong>
+          <span>dbt views. Latest ingest wins. Blank modality is filled. A short clock skew is repaired.</span>
+        </li>
+        <li>
+          <strong>Intermediate</strong>
+          <span>int_studies adds clocks and period. int_opportunities ranks the stage from lead to won.</span>
+        </li>
+        <li>
+          <strong>Marts</strong>
+          <span>Facts, dims, and the goal marts. Study facts keep one customer and drop fixtures.</span>
+        </li>
+        <li>
+          <strong>Semantic layer</strong>
+          <span>dbt/models/semantic.yml. 7 semantic models and 23 metrics. Day time spine on metric_time_spine.</span>
+        </li>
+        <li>
+          <strong>Site and BI</strong>
+          <span>rad_model/export_site.py writes site/data.js. The README maps the same marts to an Omni topic. Hex is not wired here.</span>
+        </li>
+      </ol>
+
+      <h3>Models</h3>
+      <div class="layers">
+        <div>
+          <h4>Staging</h4>
+          <ul class="models">
+            <li><code>stg_customers</code><span>One row per customer in the raw feed, including the isolation customer.</span></li>
+            <li><code>stg_sites</code><span>One row per imaging site.</span></li>
+            <li><code>stg_radiologists</code><span>One row per synthetic radiologist label.</span></li>
+            <li><code>stg_studies</code><span>One row per study after the latest ingest wins.</span></li>
+            <li><code>stg_template_catalog</code><span>One row per template, old or new, by modality and specialty.</span></li>
+            <li><code>stg_generation_meta</code><span>One row of run settings, including the launch and the as-of date.</span></li>
+            <li><code>stg_accounts</code><span>One row per account, including one inactive account.</span></li>
+            <li><code>stg_opportunities</code><span>One row per deal, with stage, channel, and outcome.</span></li>
+            <li><code>stg_marketing_spend</code><span>One row per channel, with this quarter's spend.</span></li>
+            <li><code>stg_goals</code><span>One row per goal, with the quarter target.</span></li>
+            <li><code>stg_quarter</code><span>One row of quarter bounds and the 0.95 and 0.80 status cutoffs.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Intermediate</h4>
+          <ul class="models">
+            <li><code>int_studies</code><span>One row per study for every customer, with clocks, period, and the partial-day flag. Fixtures stay here.</span></li>
+            <li><code>int_opportunities</code><span>One row per deal, with furthest_rank from 1 (lead) to 6 (won).</span></li>
+          </ul>
+          <h4>Time spine</h4>
+          <ul class="models">
+            <li><code>metric_time_spine</code><span>One row per day for the semantic layer. Not a customer table.</span></li>
+          </ul>
+        </div>
+      </div>
+      <h4>Marts</h4>
+      <ul class="models marts">
+        <li><code>fct_studies</code><span>One Northbay study. Fixtures are out. Partial days stay, flagged.</span></li>
+        <li><code>fct_studies_metric</code><span>The metric window. Partial days and fixtures are out.</span></li>
+        <li><code>fct_opportunities</code><span>One deal, with flags for this quarter's bookings, logos, and marketing pipeline.</span></li>
+        <li><code>fct_portfolio_studies</code><span>Studies in the last 30 complete days for active accounts.</span></li>
+        <li><code>dim_customer</code><span>The one customer this build is allowed to publish.</span></li>
+        <li><code>dim_site</code><span>Northbay sites that appear on the fact.</span></li>
+        <li><code>dim_radiologist</code><span>Northbay radiologist labels that appear on the fact.</span></li>
+        <li><code>mart_goal_status</code><span>One row per goal. Current value, target, and on track, at risk, or behind.</span></li>
+        <li><code>mart_actions_this_week</code><span>Three to five actions written from the other marts.</span></li>
+        <li><code>mart_monthly_bookings</code><span>One row per month of won ARR, with the monthly goal.</span></li>
+        <li><code>mart_funnel</code><span>One row per stage. How many deals reached it.</span></li>
+        <li><code>mart_win_rate</code><span>One row per segment. Won divided by won and lost.</span></li>
+        <li><code>mart_channel_performance</code><span>One row per channel. Spend, opportunities, cost, and pipeline.</span></li>
+        <li><code>mart_account_health</code><span>One active account. Adoption, trend, renewal, and health score.</span></li>
+        <li><code>mart_time_saved</code><span>One row. Before and after time on the report, same mix of scans.</span></li>
+        <li><code>mart_headline</code><span>One row of headline numbers for the featured customer.</span></li>
+        <li><code>mart_case_mix_weights</code><span>One row per modality. Pre-launch share. The shares sum to 1.</span></li>
+        <li><code>mart_case_mix_change</code><span>One row. Raw change beside the mix-adjusted change.</span></li>
+        <li><code>mart_modality_period</code><span>One row per modality and period, plus All.</span></li>
+        <li><code>mart_weekly_turnaround</code><span>One row per week and modality.</span></li>
+        <li><code>mart_site_turnaround</code><span>One row per site. Pine Cove is flagged when n is under 30.</span></li>
+        <li><code>mart_heatmap</code><span>One row per weekday and hour. Monday is 0.</span></li>
+        <li><code>mart_modality_box</code><span>Percentile boxes for time on the report, by modality and period.</span></li>
+        <li><code>mart_ai_specialty</code><span>AI impression counts by specialty after the launch.</span></li>
+        <li><code>mart_partial_period</code><span>One row. How many Northbay studies sit in the two open days.</span></li>
+      </ul>
+
+      <h3>Semantic metrics</h3>
+      <p>These are the metrics in semantic.yml that feed the dashboard. None of them set a filter. The window lives in the model.</p>
+      <div class="metrics">
+        <article class="metric">
+          <code>quarter_bookings</code>
+          <p class="kind">simple · measure quarter_bookings_arr</p>
+          <p>Closed-won ARR since the quarter started.</p>
+        </article>
+        <article class="metric">
+          <code>quarter_new_logo_count</code>
+          <p class="kind">simple · measure quarter_new_logos</p>
+          <p>First-time customers closed since the quarter started.</p>
+        </article>
+        <article class="metric">
+          <code>quarter_marketing_pipeline</code>
+          <p class="kind">simple · measure quarter_marketing_pipeline_arr</p>
+          <p>Marketing-sourced ARR that reached a meeting this quarter. Outbound is not in the measure.</p>
+        </article>
+        <article class="metric">
+          <code>cost_per_opportunity</code>
+          <p class="kind">ratio · channel_spend / channel_opportunities</p>
+          <p>Channel spend divided by opportunities that reached a meeting.</p>
+        </article>
+        <article class="metric">
+          <code>segment_win_rate</code>
+          <p class="kind">ratio · won_deals_metric / closed_deals_metric</p>
+          <p>Closed-won deals divided by closed-won and closed-lost deals.</p>
+        </article>
+        <article class="metric">
+          <code>ai_impression_acceptance_rate</code>
+          <p class="kind">ratio · ai_accepted_count / ai_scored_count</p>
+          <p>Accepted impressions divided by accepted, edited, and rejected. This is not the adoption goal.</p>
+        </article>
+        <article class="metric">
+          <code>case_mix_adjusted_time_on_report_change</code>
+          <p class="kind">simple · measure adjusted_report_change_minutes</p>
+          <p>Mix-adjusted change in time on the report. Negative means faster.</p>
+        </article>
+        <article class="metric">
+          <code>median_report_turnaround</code>
+          <p class="kind">simple · measure median_turnaround_minutes</p>
+          <p>Median minutes from exam completed to signed.</p>
+        </article>
+      </div>
+      <p>Pipeline coverage, net revenue retention, portfolio AI adoption, and minutes saved are not semantic metrics. They are formulas in mart_goal_status, because each one joins more than one table.</p>
+      <div class="code-block">
+        <p class="lang">yaml · dbt/models/semantic.yml</p>
+<pre class="yaml">- name: cost_per_opportunity
+  label: Cost per opportunity
+  type: ratio
+  type_params:
+    numerator: channel_spend
+    denominator: channel_opportunities
+
+- name: segment_win_rate
+  label: Win rate by segment
+  type: ratio
+  type_params:
+    numerator: won_deals_metric
+    denominator: closed_deals_metric</pre>
+      </div>
+      <div class="code-block">
+        <p class="lang">sql · mart_goal_status.sql · pipeline coverage</p>
+<pre class="sql">open_pipeline.open_arr * 1.0 / nullif(
+    (select target_value from {{ ref('stg_goals') }} where goal_id = 'bookings')
+    - bookings.bookings_arr,
+    0
+)</pre>
+      </div>
+      <div class="code-block">
+        <p class="lang">sql · mart_goal_status.sql · net revenue retention</p>
+<pre class="sql">select sum(arr) * 1.0 / sum(arr_one_year_ago) as nrr
+from {{ ref('stg_accounts') }}
+where arr_one_year_ago &gt; 0</pre>
+      </div>
+      <div class="code-block">
+        <p class="lang">sql · mart_goal_status.sql · portfolio AI adoption</p>
+<pre class="sql">sum(ai_used) * 1.0 / count(*) as adoption
+from {{ ref('fct_portfolio_studies') }}</pre>
+      </div>
+
+      <h3>Goal status</h3>
+      <div class="status-key">
+        <article><span class="pill on">On track</span><p>Pace goals at 95% of a straight-line pace or better. Snapshot goals at 95% of the full target or better.</p></article>
+        <article><span class="pill risk">At risk</span><p>From 80% up to the on-track line.</p></article>
+        <article><span class="pill behind">Behind</span><p>Below 80%.</p></article>
+      </div>
+      <p>Pace uses days elapsed over days in the quarter. This snapshot is day 33 of 92. The 0.95 and 0.80 cutoffs are columns on raw.quarter, not constants in the page.</p>
+      <div class="code-block">
+        <p class="lang">sql · mart_goal_status.sql</p>
+<pre class="sql">case
+    when goals.metric_kind = 'pace'
+        and actuals.current_value
+            &gt;= goals.target_value
+            * calendar.days_elapsed * 1.0 / calendar.days_in_quarter
+            * calendar.on_track_ratio
+        then 'on_track'
+    when goals.metric_kind = 'pace'
+        and actuals.current_value
+            &gt;= goals.target_value
+            * calendar.days_elapsed * 1.0 / calendar.days_in_quarter
+            * calendar.at_risk_ratio
+        then 'at_risk'
+    when goals.metric_kind = 'pace' then 'behind'
+    when actuals.current_value &gt;= goals.target_value * calendar.on_track_ratio
+        then 'on_track'
+    when actuals.current_value &gt;= goals.target_value * calendar.at_risk_ratio
+        then 'at_risk'
+    else 'behind'
+end as status</pre>
+      </div>
+
+      <h3>Data quality</h3>
+      <div class="counts">
+        <article class="count"><b>248</b><span>checks in dbt build</span></article>
+        <article class="count"><b>208</b><span>data tests</span></article>
+        <article class="count"><b>39</b><span>models</span></article>
+        <article class="count"><b>1</b><span>seed</span></article>
+      </div>
+      <p>The 208 data tests are 194 column tests plus 14 singular tests. Column tests are 114 not_null, 38 accepted_values, 32 unique, and 10 relationships. There is no model-level test block.</p>
+      <ul class="chips">
+        <li>assert_case_mix_identity</li>
+        <li>assert_clock_order</li>
+        <li>assert_customer_isolation</li>
+        <li>assert_goal_dashboard</li>
+        <li>assert_headline_matches_fact</li>
+        <li>assert_mess_was_present</li>
+        <li>assert_no_fixtures_in_marts</li>
+        <li>assert_partial_excluded</li>
+        <li>assert_population_counts</li>
+        <li>assert_qa_repairs</li>
+        <li>assert_seasonality_and_tail</li>
+        <li>assert_story_direction</li>
+        <li>assert_template_rules</li>
+        <li>assert_too_few_and_sites</li>
+      </ul>
+      <p>sources.yml does not set a freshness window on raw. Row counts are checked in assert_population_counts. Northbay and Redcedar must match generation_meta, and dim_customer must be one row.</p>
+
+      <h3>One customer at a time</h3>
+      <p>Study marts keep the customer in var customer_id, which defaults to cust_northbay. Test fixtures are dropped in the same predicate. assert_customer_isolation fails if any other customer lands in those marts. Redcedar stays in int_studies so the test has something to keep out.</p>
+      <div class="code-block">
+        <p class="lang">sql · fct_studies.sql</p>
+<pre class="sql">from {{ ref('int_studies') }}
+where customer_id = '{{ var("customer_id") }}'
+    and is_test_fixture = 0</pre>
+      </div>
+      <p>The Snowflake row access policy below is an example in dbt/analyses. dbt does not execute it on DuckDB. A customer role sees one customer_id. The internal role RAD_INTERNAL_ANALYTICS sees every customer.</p>
+      <div class="code-block">
+        <p class="lang">sql · dbt/analyses/snowflake_row_access_policies.sql</p>
+<pre class="sql">create or replace row access policy governance.rad_customer_isolation
+as (customer_id varchar) returns boolean -&gt;
+    is_role_in_session('RAD_INTERNAL_ANALYTICS')
+    or exists (
+        select 1
+        from governance.role_customer_access as access
+        where access.role_name = current_role()
+          and access.customer_id = customer_id
+    );</pre>
+      </div>
+
+      <h3>Stack</h3>
+      <ul class="chips">
+        <li>Python 3</li>
+        <li>dbt-core 1.11.16</li>
+        <li>dbt-duckdb 1.11.1</li>
+        <li>Snowflake-compatible SQL</li>
+        <li>Chart.js</li>
+        <li>Static site for GitHub Pages</li>
+      </ul>
+      <p>make all builds the virtualenv, generates the feed, runs dbt build, and writes site/data.js. make generate, make dbt, and make export run those steps on their own. Open site/index.html. There is no site build step. Chart.js is vendored under site/vendor. The folder is plain static files, which is what GitHub Pages serves. This repo has no Pages workflow and nothing here is deployed.</p>
+      <div class="code-block">
+        <p class="lang">shell</p>
+<pre class="sql">make all
+make generate
+make dbt
+make export</pre>
+      </div>
+
+      <h3>Same mix of scans</h3>
+      <p id="method-stats"></p>
+    </section>
+
     <section id="sales">
       <h2>Sales</h2>
 
@@ -116,25 +393,6 @@
         <div class="chart-box"><canvas id="saved"></canvas></div>
       </figure>
     </section>
-
-    <details id="how">
-      <summary>How it's built</summary>
-      <div class="how-body">
-        <p>Goal status and the action list are columns in the warehouse, not text typed into the page.</p>
-        <ul>
-          <li>A pace goal is on track when the value is at least 95% of a straight-line pace, at risk from 80% up to that line, and behind below 80%. Day 33 of a 92-day quarter is the line used here.</li>
-          <li>A snapshot goal uses those same cutoffs against the full target. Coverage, retention, adoption, and minutes saved are snapshot goals.</li>
-          <li>Bookings are closed-won ARR since October 1. New logos are first-time customers in that set.</li>
-          <li>Pipeline coverage is open pipeline from the meeting stage on, divided by bookings still left in the quarter.</li>
-          <li>Marketing pipeline counts meetings and later that marketing sourced this quarter. Outbound is not in that goal. It is still on the channel chart.</li>
-          <li>Net revenue retention is this year's ARR for customers who were here a year ago, divided by that older book.</li>
-          <li>AI adoption is the share of reports in the last 30 complete days that used an AI impression. The last two days of the feed are still loading and stay out.</li>
-          <li>Minutes saved takes the mix-adjusted report-time change at Northbay, multiplies by that group's recent studies, and divides by the radiologists who read them.</li>
-        </ul>
-        <p id="method-stats"></p>
-        <p>Definitions live in <code>dbt/models/semantic.yml</code>. A Snowflake row access policy example sits in <code>dbt/analyses</code> and is not executed on DuckDB.</p>
-      </div>
-    </details>
 
     <section class="about">
       <h2>About me</h2>
