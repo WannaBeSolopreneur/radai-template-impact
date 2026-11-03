@@ -8645,5 +8645,550 @@
         }
       ]
     }
+  },
+  "dashboard": {
+    "goals": [
+      {
+        "id": "bookings",
+        "label": "New bookings",
+        "detail": "This quarter, new and expansion ARR",
+        "unit": "currency",
+        "kind": "pace",
+        "currentValue": 540000.0,
+        "targetValue": 2400000.0,
+        "currentLabel": "$540k",
+        "targetLabel": "$2.4M",
+        "progress": 0.225,
+        "pace": 0.3587,
+        "status": "behind",
+        "statusLabel": "Behind",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 1
+      },
+      {
+        "id": "new_logos",
+        "label": "New logos",
+        "detail": "First-time customers this quarter",
+        "unit": "count",
+        "kind": "pace",
+        "currentValue": 3.0,
+        "targetValue": 8.0,
+        "currentLabel": "3",
+        "targetLabel": "8",
+        "progress": 0.375,
+        "pace": 0.3587,
+        "status": "on_track",
+        "statusLabel": "On track",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 2
+      },
+      {
+        "id": "pipeline_coverage",
+        "label": "Pipeline coverage",
+        "detail": "Open pipeline divided by bookings still left",
+        "unit": "multiple",
+        "kind": "snapshot",
+        "currentValue": 2.1183,
+        "targetValue": 3.0,
+        "currentLabel": "2.1x",
+        "targetLabel": "3x",
+        "progress": 0.7061,
+        "pace": null,
+        "status": "behind",
+        "statusLabel": "Behind",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 3
+      },
+      {
+        "id": "net_revenue_retention",
+        "label": "Net revenue retention",
+        "detail": "This year's book versus the same customers a year ago",
+        "unit": "percent",
+        "kind": "snapshot",
+        "currentValue": 1.0377,
+        "targetValue": 1.1,
+        "currentLabel": "103.8%",
+        "targetLabel": "110%",
+        "progress": 0.9433,
+        "pace": null,
+        "status": "at_risk",
+        "statusLabel": "At risk",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 4
+      },
+      {
+        "id": "marketing_pipeline",
+        "label": "Marketing pipeline",
+        "detail": "Meetings reached this quarter, not counting outbound",
+        "unit": "currency",
+        "kind": "pace",
+        "currentValue": 1520000.0,
+        "targetValue": 3000000.0,
+        "currentLabel": "$1.52M",
+        "targetLabel": "$3M",
+        "progress": 0.5067,
+        "pace": 0.3587,
+        "status": "on_track",
+        "statusLabel": "On track",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 5
+      },
+      {
+        "id": "ai_adoption",
+        "label": "AI adoption",
+        "detail": "Recent reports that used an AI impression",
+        "unit": "percent",
+        "kind": "snapshot",
+        "currentValue": 0.7678,
+        "targetValue": 0.9,
+        "currentLabel": "76.8%",
+        "targetLabel": "90%",
+        "progress": 0.8532,
+        "pace": null,
+        "status": "at_risk",
+        "statusLabel": "At risk",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 6
+      },
+      {
+        "id": "minutes_saved",
+        "label": "Minutes saved",
+        "detail": "Per radiologist over the last 30 days",
+        "unit": "minutes",
+        "kind": "snapshot",
+        "currentValue": 281.7695,
+        "targetValue": 180.0,
+        "currentLabel": "282 min",
+        "targetLabel": "180 min",
+        "progress": 1.5654,
+        "pace": null,
+        "status": "on_track",
+        "statusLabel": "On track",
+        "daysElapsed": 33,
+        "daysInQuarter": 92,
+        "sortOrder": 7
+      }
+    ],
+    "actions": [
+      {
+        "id": "renewal_risk",
+        "sortOrder": 1,
+        "sectionId": "customers",
+        "title": "Renewals",
+        "sentence": "Lakeside Imaging Group and Summit Health System renew within 60 days and AI usage is falling. Book a check-in."
+      },
+      {
+        "id": "bookings_pace",
+        "sortOrder": 2,
+        "sectionId": "sales-bookings",
+        "title": "Bookings",
+        "sentence": "New bookings are at $540k against a $2.4M quarter goal, and the pace is behind. Review deals in contract."
+      },
+      {
+        "id": "win_rate",
+        "sortOrder": 3,
+        "sectionId": "sales-win",
+        "title": "Win rate",
+        "sentence": "Health systems win 25% of closed deals. Radiology groups win 75%. Adjust the playbook."
+      },
+      {
+        "id": "channel_cost",
+        "sortOrder": 4,
+        "sectionId": "marketing",
+        "title": "Marketing",
+        "sentence": "Webinars bring pipeline at the lowest cost, $1,250 per opportunity. Add one more this quarter."
+      },
+      {
+        "id": "minutes_saved",
+        "sortOrder": 5,
+        "sectionId": "time-saved",
+        "title": "Time saved",
+        "sentence": "Radiologists saved about 282 min each over the last 30 days, ahead of the 180 min goal. Use that story on the next renewal."
+      }
+    ],
+    "months": [
+      {
+        "month": "2026-06-01",
+        "label": "Jun",
+        "bookings": 250000,
+        "goal": 800000.0,
+        "note": null
+      },
+      {
+        "month": "2026-07-01",
+        "label": "Jul",
+        "bookings": 400000,
+        "goal": 800000.0,
+        "note": null
+      },
+      {
+        "month": "2026-08-01",
+        "label": "Aug",
+        "bookings": 350000,
+        "goal": 800000.0,
+        "note": null
+      },
+      {
+        "month": "2026-09-01",
+        "label": "Sep",
+        "bookings": 300000,
+        "goal": 800000.0,
+        "note": null
+      },
+      {
+        "month": "2026-10-01",
+        "label": "Oct",
+        "bookings": 540000,
+        "goal": 800000.0,
+        "note": null
+      },
+      {
+        "month": "2026-11-01",
+        "label": "Nov",
+        "bookings": 0,
+        "goal": 800000.0,
+        "note": "November has just started."
+      }
+    ],
+    "funnel": [
+      {
+        "stage": "lead",
+        "label": "Lead",
+        "rank": 1,
+        "reached": 83,
+        "conversion": null
+      },
+      {
+        "stage": "meeting",
+        "label": "Meeting",
+        "rank": 2,
+        "reached": 59,
+        "conversion": 0.7108
+      },
+      {
+        "stage": "demo",
+        "label": "Demo",
+        "rank": 3,
+        "reached": 47,
+        "conversion": 0.7966
+      },
+      {
+        "stage": "pilot",
+        "label": "Pilot",
+        "rank": 4,
+        "reached": 22,
+        "conversion": 0.4681
+      },
+      {
+        "stage": "contract",
+        "label": "Contract",
+        "rank": 5,
+        "reached": 12,
+        "conversion": 0.5455
+      },
+      {
+        "stage": "won",
+        "label": "Won",
+        "rank": 6,
+        "reached": 9,
+        "conversion": 0.75
+      }
+    ],
+    "wins": [
+      {
+        "segment": "radiology_group",
+        "label": "Radiology group",
+        "closed": 16,
+        "won": 12,
+        "rate": 0.75
+      },
+      {
+        "segment": "health_system",
+        "label": "Health system",
+        "closed": 12,
+        "won": 3,
+        "rate": 0.25
+      }
+    ],
+    "channels": [
+      {
+        "channel": "webinars",
+        "name": "Webinars",
+        "spend": 15000,
+        "opportunities": 12,
+        "pipeline": 640000,
+        "cost": 1250.0
+      },
+      {
+        "channel": "referrals",
+        "name": "Referrals",
+        "spend": 36000,
+        "opportunities": 6,
+        "pipeline": 480000,
+        "cost": 6000.0
+      },
+      {
+        "channel": "website",
+        "name": "Website",
+        "spend": 30000,
+        "opportunities": 5,
+        "pipeline": 220000,
+        "cost": 6000.0
+      },
+      {
+        "channel": "outbound",
+        "name": "Outbound",
+        "spend": 95000,
+        "opportunities": 8,
+        "pipeline": 510000,
+        "cost": 11875.0
+      },
+      {
+        "channel": "rsna",
+        "name": "RSNA conference",
+        "spend": 210000,
+        "opportunities": 3,
+        "pipeline": 180000,
+        "cost": 70000.0
+      }
+    ],
+    "accounts": [
+      {
+        "id": "acct_lakeside",
+        "name": "Lakeside Imaging Group",
+        "segment": "Radiology group",
+        "arr": 420000,
+        "renewal": "Dec 18",
+        "daysToRenewal": 45,
+        "adoption": "36%",
+        "adoptionRate": 0.36,
+        "trend": "down",
+        "trendLabel": "Down",
+        "healthScore": 35,
+        "healthBand": "risk",
+        "healthLabel": "At risk",
+        "renewalAtRisk": 1
+      },
+      {
+        "id": "acct_summit",
+        "name": "Summit Health System",
+        "segment": "Health system",
+        "arr": 980000,
+        "renewal": "Dec 22",
+        "daysToRenewal": 49,
+        "adoption": "36%",
+        "adoptionRate": 0.36,
+        "trend": "down",
+        "trendLabel": "Down",
+        "healthScore": 35,
+        "healthBand": "risk",
+        "healthLabel": "At risk",
+        "renewalAtRisk": 1
+      },
+      {
+        "id": "acct_delta",
+        "name": "Delta Imaging Partners",
+        "segment": "Radiology group",
+        "arr": 210000,
+        "renewal": "Nov 28",
+        "daysToRenewal": 25,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "up",
+        "trendLabel": "Up",
+        "healthScore": 78,
+        "healthBand": "healthy",
+        "healthLabel": "Healthy",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_unity",
+        "name": "Unity Health System",
+        "segment": "Health system",
+        "arr": 540000,
+        "renewal": "Jan 20, 2027",
+        "daysToRenewal": 78,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_harbor",
+        "name": "Harbor Health System",
+        "segment": "Health system",
+        "arr": 1100000,
+        "renewal": "Feb 1, 2027",
+        "daysToRenewal": 90,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_metro",
+        "name": "Metro Regional Health",
+        "segment": "Health system",
+        "arr": 760000,
+        "renewal": "Mar 1, 2027",
+        "daysToRenewal": 118,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_cedar",
+        "name": "Cedar Valley Radiology",
+        "segment": "Radiology group",
+        "arr": 330000,
+        "renewal": "Apr 12, 2027",
+        "daysToRenewal": 160,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_queens",
+        "name": "Queensport Health",
+        "segment": "Health system",
+        "arr": 870000,
+        "renewal": "May 1, 2027",
+        "daysToRenewal": 179,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "cust_northbay",
+        "name": "Northbay Radiology Partners",
+        "segment": "Radiology group",
+        "arr": 1450000,
+        "renewal": "Jun 15, 2027",
+        "daysToRenewal": 224,
+        "adoption": "81.3%",
+        "adoptionRate": 0.8125,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 79,
+        "healthBand": "healthy",
+        "healthLabel": "Healthy",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_prairie",
+        "name": "Prairie Radiology Group",
+        "segment": "Radiology group",
+        "arr": 310000,
+        "renewal": "Aug 1, 2027",
+        "daysToRenewal": 271,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_ridge",
+        "name": "Ridgeview Imaging",
+        "segment": "Radiology group",
+        "arr": 190000,
+        "renewal": "Sep 1, 2027",
+        "daysToRenewal": 302,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "flat",
+        "trendLabel": "Flat",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_bright",
+        "name": "Brightwater Radiology",
+        "segment": "Radiology group",
+        "arr": 160000,
+        "renewal": "Oct 8, 2027",
+        "daysToRenewal": 339,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "new",
+        "trendLabel": "New",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_oak",
+        "name": "Oak Street Imaging",
+        "segment": "Radiology group",
+        "arr": 140000,
+        "renewal": "Oct 21, 2027",
+        "daysToRenewal": 352,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "new",
+        "trendLabel": "New",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      },
+      {
+        "id": "acct_clear",
+        "name": "Clearpath Radiology",
+        "segment": "Radiology group",
+        "arr": 150000,
+        "renewal": "Oct 29, 2027",
+        "daysToRenewal": 360,
+        "adoption": "70%",
+        "adoptionRate": 0.7,
+        "trend": "new",
+        "trendLabel": "New",
+        "healthScore": 71,
+        "healthBand": "watch",
+        "healthLabel": "Watch",
+        "renewalAtRisk": 0
+      }
+    ],
+    "timeSaved": {
+      "beforeMinutes": 13.2993,
+      "afterMinutes": 10.958,
+      "minutesFaster": 2.3413,
+      "caption": "Same mix of scans. About 2.3 minutes faster on the report."
+    }
   }
 }

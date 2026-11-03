@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+from decimal import Decimal
 from pathlib import Path
 
 import duckdb
@@ -32,6 +33,164 @@ def rows(con, sql: str) -> list[dict]:
 
 def iso_day(value) -> str:
     return str(value)[:10]
+
+
+def plain(value):
+    if value is None:
+        return None
+    if hasattr(value, "isoformat"):
+        return iso_day(value)
+    if isinstance(value, (bytes, bytearray)):
+        return value.decode()
+    if isinstance(value, Decimal):
+        return float(value)
+    if hasattr(value, "item"):
+        value = value.item()
+    if isinstance(value, float) and not np.isfinite(value):
+        raise SystemExit("Non-finite number in the page export")
+    return value
+
+
+def table(con, sql: str) -> list[dict]:
+    return [{key: plain(item) for key, item in row.items()} for row in rows(con, sql)]
+
+
+def load_dashboard(con) -> dict:
+    goals = table(
+        con,
+        """
+        select
+            goal_id as id,
+            label,
+            detail,
+            unit,
+            metric_kind as kind,
+            current_value as currentValue,
+            target_value as targetValue,
+            current_label as currentLabel,
+            target_label as targetLabel,
+            progress_ratio as progress,
+            pace_ratio as pace,
+            status,
+            status_label as statusLabel,
+            days_elapsed as daysElapsed,
+            days_in_quarter as daysInQuarter,
+            sort_order as sortOrder
+        from marts.mart_goal_status
+        order by sort_order
+        """,
+    )
+    actions = table(
+        con,
+        """
+        select
+            action_id as id,
+            sort_order as sortOrder,
+            section_id as sectionId,
+            title,
+            sentence
+        from marts.mart_actions_this_week
+        order by sort_order
+        """,
+    )
+    if not 3 <= len(actions) <= 5:
+        raise SystemExit(f"Expected 3 to 5 actions, found {len(actions)}")
+    months = table(
+        con,
+        """
+        select
+            cast(month_start as varchar) as month,
+            month_label as label,
+            bookings_arr as bookings,
+            monthly_goal as goal,
+            month_note as note
+        from marts.mart_monthly_bookings
+        order by month_start
+        """,
+    )
+    funnel = table(
+        con,
+        """
+        select
+            stage,
+            label,
+            stage_rank as rank,
+            reached,
+            conversion_from_previous as conversion
+        from marts.mart_funnel
+        order by stage_rank
+        """,
+    )
+    wins = table(
+        con,
+        """
+        select
+            segment,
+            segment_label as label,
+            closed_deals as closed,
+            won_deals as won,
+            win_rate as rate
+        from marts.mart_win_rate
+        order by case segment when 'radiology_group' then 1 else 2 end
+        """,
+    )
+    channels = table(
+        con,
+        """
+        select
+            channel,
+            channel_name as name,
+            spend,
+            opportunities,
+            pipeline_arr as pipeline,
+            cost_per_opportunity as cost
+        from marts.mart_channel_performance
+        order by sort_order
+        """,
+    )
+    accounts = table(
+        con,
+        """
+        select
+            account_id as id,
+            account_name as name,
+            segment_label as segment,
+            arr,
+            renewal_label as renewal,
+            days_to_renewal as daysToRenewal,
+            adoption_label as adoption,
+            recent_ai_rate as adoptionRate,
+            trend,
+            trend_label as trendLabel,
+            health_score as healthScore,
+            health_band as healthBand,
+            health_label as healthLabel,
+            renewal_at_risk as renewalAtRisk
+        from marts.mart_account_health
+        order by display_order
+        """,
+    )
+    saved = table(
+        con,
+        """
+        select
+            before_minutes as beforeMinutes,
+            after_minutes as afterMinutes,
+            minutes_faster as minutesFaster,
+            caption
+        from marts.mart_time_saved
+        """,
+    )[0]
+    return {
+        "goals": goals,
+        "actions": actions,
+        "months": months,
+        "funnel": funnel,
+        "wins": wins,
+        "channels": channels,
+        "accounts": accounts,
+        "timeSaved": saved,
+    }
 
 
 def boot_median(values: np.ndarray, rng: np.random.Generator, draws: int):
@@ -436,6 +595,7 @@ def main() -> None:
             "wordsBefore": float(headline["median_words_before"]),
         },
         "slices": slices,
+        "dashboard": load_dashboard(con),
     }
     # pack() with point None skips the drift check. Rates still need a cover.
     cover(float(headline["ai_acceptance_after"]), ai_lo, ai_hi, "ai")
@@ -514,6 +674,17 @@ def print_summary(payload: dict) -> None:
             after=meta["mriAfter"],
         )
     )
+    for goal in payload["dashboard"]["goals"]:
+        print(
+            "Goal {label}: {current} of {target} ({status})".format(
+                label=goal["label"],
+                current=goal["currentLabel"],
+                target=goal["targetLabel"],
+                status=goal["statusLabel"],
+            )
+        )
+    for action in payload["dashboard"]["actions"]:
+        print("Action: " + action["sentence"])
 
 
 if __name__ == "__main__":
