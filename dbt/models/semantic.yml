@@ -98,6 +98,175 @@ semantic_models:
         agg: sum
         expr: raw_change_minutes
 
+  - name: opportunities
+    description: >
+      One row per deal. Quarter flags mark bookings, new logos, and
+      marketing-sourced pipeline for the open quarter.
+    model: ref('fct_opportunities')
+    defaults:
+      agg_time_dimension: created_at
+    entities:
+      - name: opportunity
+        type: primary
+        expr: opportunity_id
+      - name: account
+        type: foreign
+        expr: account_id
+    dimensions:
+      - name: created_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: buyer_segment
+        type: categorical
+        expr: segment
+      - name: stage
+        type: categorical
+      - name: outcome
+        type: categorical
+      - name: source_channel
+        type: categorical
+        expr: channel
+    measures:
+      - name: opportunity_rows
+        description: Deals on the fact.
+        agg: count
+        expr: opportunity_id
+      - name: quarter_bookings_arr
+        description: Closed-won ARR in the open quarter.
+        agg: sum
+        expr: q4_won_arr
+      - name: quarter_new_logos
+        description: First-time customers closed in the open quarter.
+        agg: sum
+        expr: q4_new_logo
+      - name: quarter_marketing_pipeline_arr
+        description: Marketing-sourced pipeline that reached a meeting this quarter.
+        agg: sum
+        expr: q4_marketing_arr
+
+  - name: goal_status
+    description: >
+      One row per goal. Status is on track, at risk, or behind.
+      Pace goals compare with a straight line through the quarter.
+      Snapshot goals compare with the full target.
+    model: ref('mart_goal_status')
+    defaults:
+      agg_time_dimension: as_of
+    entities:
+      - name: goal
+        type: primary
+        expr: goal_id
+    dimensions:
+      - name: as_of
+        type: time
+        type_params:
+          time_granularity: day
+      - name: status
+        type: categorical
+      - name: metric_kind
+        type: categorical
+    measures:
+      - name: goal_current_value
+        description: The live value for the goal.
+        agg: sum
+        expr: current_value
+      - name: goal_target_value
+        description: The target for the goal.
+        agg: sum
+        expr: target_value
+
+  - name: channel_performance
+    description: Spend and pipeline by marketing or outbound channel this quarter.
+    model: ref('mart_channel_performance')
+    defaults:
+      agg_time_dimension: as_of
+    entities:
+      - name: marketing_channel
+        type: primary
+        expr: channel
+    dimensions:
+      - name: as_of
+        type: time
+        type_params:
+          time_granularity: day
+      - name: channel_name
+        type: categorical
+      - name: sort_order
+        type: categorical
+    measures:
+      - name: channel_spend_amount
+        description: Spend on the channel this quarter.
+        agg: sum
+        expr: spend
+      - name: channel_opportunity_count
+        description: Opportunities created this quarter that reached a meeting.
+        agg: sum
+        expr: opportunities
+      - name: channel_pipeline_arr
+        description: ARR on those opportunities.
+        agg: sum
+        expr: pipeline_arr
+
+  - name: win_rate_segment
+    description: Closed deals and wins by segment.
+    model: ref('mart_win_rate')
+    defaults:
+      agg_time_dimension: as_of
+    entities:
+      - name: win_segment
+        type: primary
+        expr: segment
+    dimensions:
+      - name: as_of
+        type: time
+        type_params:
+          time_granularity: day
+    measures:
+      - name: closed_deal_count
+        description: Deals closed won or lost in the win-rate window.
+        agg: sum
+        expr: closed_deals
+      - name: won_deal_count
+        description: Deals closed won in the win-rate window.
+        agg: sum
+        expr: won_deals
+
+  - name: account_health
+    description: One row per active account, with adoption and a health score.
+    model: ref('mart_account_health')
+    defaults:
+      agg_time_dimension: renewal_date
+    entities:
+      - name: account
+        type: primary
+        expr: account_id
+    dimensions:
+      - name: renewal_date
+        type: time
+        type_params:
+          time_granularity: day
+      - name: buyer_segment
+        type: categorical
+        expr: segment
+      - name: trend
+        type: categorical
+      - name: health_band
+        type: categorical
+    measures:
+      - name: account_arr
+        description: Current ARR on the account.
+        agg: sum
+        expr: arr
+      - name: account_rows
+        description: Active accounts.
+        agg: count
+        expr: account_id
+      - name: health_score_value
+        description: Health score from adoption and the usage trend.
+        agg: average
+        expr: health_score
+
 metrics:
   - name: study_count
     label: Study count
@@ -191,3 +360,91 @@ metrics:
     type: simple
     type_params:
       measure: adjusted_report_change_minutes
+
+  - name: quarter_bookings
+    label: Quarterly new bookings
+    description: Closed-won ARR since the quarter started.
+    type: simple
+    type_params:
+      measure: quarter_bookings_arr
+
+  - name: quarter_new_logo_count
+    label: New logos
+    description: First-time customers closed since the quarter started.
+    type: simple
+    type_params:
+      measure: quarter_new_logos
+
+  - name: quarter_marketing_pipeline
+    label: Marketing-sourced pipeline
+    description: >
+      ARR on marketing-sourced deals created this quarter that reached a meeting.
+      Outbound is not included.
+    type: simple
+    type_params:
+      measure: quarter_marketing_pipeline_arr
+
+  - name: channel_spend
+    label: Channel spend
+    description: Spend recorded for a channel this quarter.
+    type: simple
+    type_params:
+      measure: channel_spend_amount
+
+  - name: channel_opportunities
+    label: Channel opportunities
+    description: Opportunities created this quarter that reached a meeting.
+    type: simple
+    type_params:
+      measure: channel_opportunity_count
+
+  - name: channel_pipeline
+    label: Channel pipeline
+    description: ARR on opportunities created this quarter that reached a meeting.
+    type: simple
+    type_params:
+      measure: channel_pipeline_arr
+
+  - name: cost_per_opportunity
+    label: Cost per opportunity
+    description: Channel spend divided by opportunities that reached a meeting.
+    type: ratio
+    type_params:
+      numerator: channel_spend
+      denominator: channel_opportunities
+
+  - name: segment_win_rate
+    label: Win rate by segment
+    description: Closed-won deals divided by closed-won and closed-lost deals.
+    type: ratio
+    type_params:
+      numerator: won_deals_metric
+      denominator: closed_deals_metric
+
+  - name: won_deals_metric
+    label: Won deals
+    description: Deals closed won in the win-rate window.
+    type: simple
+    type_params:
+      measure: won_deal_count
+
+  - name: closed_deals_metric
+    label: Closed deals
+    description: Deals closed won or lost in the win-rate window.
+    type: simple
+    type_params:
+      measure: closed_deal_count
+
+  - name: active_account_count
+    label: Active accounts
+    description: Accounts currently on the book.
+    type: simple
+    type_params:
+      measure: account_rows
+
+  - name: book_arr
+    label: Booked ARR
+    description: ARR on active accounts.
+    type: simple
+    type_params:
+      measure: account_arr

@@ -1,0 +1,86 @@
+# Commercial assumptions for a fictional radiology AI vendor.
+# These are not Rad AI numbers and they are not a real company's results.
+# The generator expands this file into accounts, opportunities, and spend.
+
+quarter_start: "2026-10-01"
+quarter_end: "2026-12-31"
+funnel_start: "2026-05-01"
+win_rate_start: "2026-01-01"
+chart_start: "2026-06-01"
+on_track_ratio: 0.95
+at_risk_ratio: 0.80
+renewal_horizon_days: 60
+trend_points: 0.08
+
+goals:
+  - {id: bookings, label: New bookings, detail: "This quarter, new and expansion ARR", unit: currency, kind: pace, target: 2400000, sort: 1}
+  - {id: new_logos, label: New logos, detail: First-time customers this quarter, unit: count, kind: pace, target: 8, sort: 2}
+  - {id: pipeline_coverage, label: Pipeline coverage, detail: Open pipeline divided by bookings still left, unit: multiple, kind: snapshot, target: 3.0, sort: 3}
+  - {id: net_revenue_retention, label: Net revenue retention, detail: This year's book versus the same customers a year ago, unit: percent, kind: snapshot, target: 1.10, sort: 4}
+  - {id: marketing_pipeline, label: Marketing pipeline, detail: "Meetings reached this quarter, not counting outbound", unit: currency, kind: pace, target: 3000000, sort: 5}
+  - {id: ai_adoption, label: AI adoption, detail: Recent reports that used an AI impression, unit: percent, kind: snapshot, target: 0.90, sort: 6}
+  - {id: minutes_saved, label: Minutes saved, detail: Per radiologist over the last 30 days, unit: minutes, kind: snapshot, target: 180, sort: 7}
+
+# arr_one_year_ago of 0 means the account is new and is left out of retention.
+# usage counts are exact accepted-impression counts, not random draws.
+accounts:
+  - {id: cust_northbay, name: Northbay Radiology Partners, segment: radiology_group, arr: 1450000, arr_one_year_ago: 1200000, renewal: "2027-06-15", active: 1, radiologists: 0}
+  - {id: acct_lakeside, name: Lakeside Imaging Group, segment: radiology_group, arr: 420000, arr_one_year_ago: 420000, renewal: "2026-12-18", active: 1, radiologists: 4, prior_n: 100, prior_ai: 74, recent_n: 100, recent_ai: 36}
+  - {id: acct_summit, name: Summit Health System, segment: health_system, arr: 980000, arr_one_year_ago: 1050000, renewal: "2026-12-22", active: 1, radiologists: 8, prior_n: 100, prior_ai: 74, recent_n: 100, recent_ai: 36}
+  - {id: acct_harbor, name: Harbor Health System, segment: health_system, arr: 1100000, arr_one_year_ago: 900000, renewal: "2027-02-01", active: 1, radiologists: 8, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_cedar, name: Cedar Valley Radiology, segment: radiology_group, arr: 330000, arr_one_year_ago: 240000, renewal: "2027-04-12", active: 1, radiologists: 4, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_metro, name: Metro Regional Health, segment: health_system, arr: 760000, arr_one_year_ago: 760000, renewal: "2027-03-01", active: 1, radiologists: 8, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_prairie, name: Prairie Radiology Group, segment: radiology_group, arr: 310000, arr_one_year_ago: 310000, renewal: "2027-08-01", active: 1, radiologists: 4, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_unity, name: Unity Health System, segment: health_system, arr: 540000, arr_one_year_ago: 600000, renewal: "2027-01-20", active: 1, radiologists: 8, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_ridge, name: Ridgeview Imaging, segment: radiology_group, arr: 190000, arr_one_year_ago: 190000, renewal: "2027-09-01", active: 1, radiologists: 4, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_queens, name: Queensport Health, segment: health_system, arr: 870000, arr_one_year_ago: 800000, renewal: "2027-05-01", active: 1, radiologists: 8, prior_n: 60, prior_ai: 41, recent_n: 60, recent_ai: 42}
+  - {id: acct_delta, name: Delta Imaging Partners, segment: radiology_group, arr: 210000, arr_one_year_ago: 210000, renewal: "2026-11-28", active: 1, radiologists: 4, prior_n: 80, prior_ai: 34, recent_n: 80, recent_ai: 56}
+  - {id: acct_bright, name: Brightwater Radiology, segment: radiology_group, arr: 160000, arr_one_year_ago: 0, renewal: "2027-10-08", active: 1, radiologists: 4, prior_n: 0, prior_ai: 0, recent_n: 40, recent_ai: 28}
+  - {id: acct_oak, name: Oak Street Imaging, segment: radiology_group, arr: 140000, arr_one_year_ago: 0, renewal: "2027-10-21", active: 1, radiologists: 4, prior_n: 0, prior_ai: 0, recent_n: 40, recent_ai: 28}
+  - {id: acct_clear, name: Clearpath Radiology, segment: radiology_group, arr: 150000, arr_one_year_ago: 0, renewal: "2027-10-29", active: 1, radiologists: 4, prior_n: 0, prior_ai: 0, recent_n: 40, recent_ai: 28}
+  - {id: acct_westline, name: Westline Radiology, segment: radiology_group, arr: 0, arr_one_year_ago: 220000, renewal: "", active: 0, radiologists: 0, prior_n: 0, prior_ai: 0, recent_n: 0, recent_ai: 0}
+
+channels:
+  - {id: webinars, name: Webinars, spend: 15000, sort: 1, q4_open_opps: 11, q4_open_arr: 480000, meeting: 4, demo: 4, pilot: 3}
+  - {id: referrals, name: Referrals, spend: 36000, sort: 2, q4_open_opps: 5, q4_open_arr: 340000, meeting: 2, demo: 2, pilot: 1}
+  - {id: website, name: Website, spend: 30000, sort: 3, q4_open_opps: 4, q4_open_arr: 70000, meeting: 2, demo: 2, pilot: 0}
+  - {id: outbound, name: Outbound, spend: 95000, sort: 4, q4_open_opps: 7, q4_open_arr: 420000, meeting: 3, demo: 2, pilot: 2}
+  - {id: rsna, name: RSNA conference, spend: 210000, sort: 5, q4_open_opps: 3, q4_open_arr: 180000, meeting: 1, demo: 2, pilot: 0}
+
+# Closed-won this quarter. These set bookings and new logos.
+q4_wins:
+  - {id: opp_brightwater, account: acct_brightwater, segment: radiology_group, arr: 160000, channel: webinars, new_logo: 1, created: "2026-10-02", closed: "2026-10-08"}
+  - {id: opp_oak, account: acct_oak, segment: radiology_group, arr: 140000, channel: referrals, new_logo: 1, created: "2026-10-10", closed: "2026-10-21"}
+  - {id: opp_clear, account: acct_clear, segment: radiology_group, arr: 150000, channel: website, new_logo: 1, created: "2026-10-12", closed: "2026-10-29"}
+  - {id: opp_cedar_exp, account: acct_cedar, segment: radiology_group, arr: 90000, channel: outbound, new_logo: 0, created: "2026-10-05", closed: "2026-10-15"}
+
+# Still open, created before this quarter. Counts toward coverage, not this quarter's channel chart.
+older_open:
+  - {id: opp_pacific, segment: health_system, stage: contract, arr: 420000, channel: outbound, created: "2026-08-04"}
+  - {id: opp_inland, segment: radiology_group, stage: contract, arr: 380000, channel: referrals, created: "2026-08-18"}
+  - {id: opp_northshore, segment: radiology_group, stage: contract, arr: 250000, channel: webinars, created: "2026-09-02"}
+  - {id: opp_pilot_summit_east, segment: health_system, stage: pilot, arr: 450000, channel: outbound, created: "2026-07-14"}
+  - {id: opp_pilot_prairie_south, segment: radiology_group, stage: pilot, arr: 400000, channel: referrals, created: "2026-07-28"}
+  - {id: opp_pilot_metro_west, segment: health_system, stage: pilot, arr: 320000, channel: website, created: "2026-08-11"}
+  - {id: opp_pilot_ridge_north, segment: radiology_group, stage: pilot, arr: 230000, channel: webinars, created: "2026-09-09"}
+
+# Won earlier. June through September show up on the monthly chart.
+# January through May keep the win rate honest without landing in this quarter.
+history_wins:
+  - {id: opp_jun, segment: radiology_group, arr: 250000, channel: referrals, created: "2026-06-02", closed: "2026-06-18"}
+  - {id: opp_jul, segment: radiology_group, arr: 400000, channel: webinars, created: "2026-07-06", closed: "2026-07-16"}
+  - {id: opp_aug, segment: radiology_group, arr: 350000, channel: website, created: "2026-08-03", closed: "2026-08-20"}
+  - {id: opp_sep, segment: radiology_group, arr: 300000, channel: referrals, created: "2026-09-01", closed: "2026-09-14"}
+  - {id: opp_jan, segment: radiology_group, arr: 180000, channel: outbound, created: "2026-01-06", closed: "2026-01-20"}
+  - {id: opp_feb, segment: radiology_group, arr: 200000, channel: referrals, created: "2026-02-03", closed: "2026-02-17"}
+  - {id: opp_mar_rad, segment: radiology_group, arr: 220000, channel: webinars, created: "2026-03-02", closed: "2026-03-12"}
+  - {id: opp_apr_rad, segment: radiology_group, arr: 190000, channel: website, created: "2026-04-08", closed: "2026-04-22"}
+  - {id: opp_mar_hs, segment: health_system, arr: 300000, channel: outbound, created: "2026-02-20", closed: "2026-03-11"}
+  - {id: opp_apr_hs, segment: health_system, arr: 280000, channel: outbound, created: "2026-03-30", closed: "2026-04-16"}
+  - {id: opp_may_hs, segment: health_system, arr: 260000, channel: referrals, created: "2026-05-04", closed: "2026-05-19"}
+
+# Lost deals. Four radiology groups and nine health systems.
+losses:
+  radiology_group: 4
+  health_system: 9
+lead_only: 24

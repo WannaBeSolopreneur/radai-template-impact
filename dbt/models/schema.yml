@@ -405,3 +405,206 @@ models:
         data_tests: [unique, not_null]
       - name: partial_studies
         data_tests: [not_null]
+
+  - name: stg_accounts
+    description: Customer accounts for the fictional vendor, including one inactive account.
+    columns:
+      - name: account_id
+        data_tests: [unique, not_null]
+      - name: segment
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["radiology_group", "health_system"]
+      - name: is_active
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: stg_opportunities
+    description: Deals with a stage, a channel, and an outcome.
+    columns:
+      - name: opportunity_id
+        data_tests: [unique, not_null]
+      - name: outcome
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["open", "won", "lost"]
+      - name: furthest_stage
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["lead", "meeting", "demo", "pilot", "contract", "won"]
+
+  - name: stg_marketing_spend
+    description: Quarter spend by channel.
+    columns:
+      - name: channel
+        data_tests: [unique, not_null]
+      - name: spend
+        data_tests: [not_null]
+
+  - name: stg_goals
+    description: One target per goal for the current quarter.
+    columns:
+      - name: goal_id
+        data_tests: [unique, not_null]
+      - name: metric_kind
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["pace", "snapshot"]
+      - name: target_value
+        data_tests: [not_null]
+
+  - name: stg_quarter
+    description: Quarter bounds and the cutoffs that decide on track, at risk, and behind.
+    columns:
+      - name: quarter_start
+        data_tests: [not_null]
+      - name: on_track_ratio
+        data_tests: [not_null]
+
+  - name: fct_opportunities
+    description: Deals with this quarter's bookings, new logos, and marketing pipeline flags.
+    columns:
+      - name: opportunity_id
+        data_tests: [unique, not_null]
+      - name: q4_won_arr
+        data_tests: [not_null]
+      - name: q4_new_logo
+        data_tests: [not_null]
+
+  - name: fct_portfolio_studies
+    description: Studies in the last 30 complete days for active accounts. The open two days are out.
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: account_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_accounts')
+                field: account_id
+      - name: ai_used
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: mart_goal_status
+    description: Current value, target, and on track / at risk / behind for each goal. Status is computed here.
+    columns:
+      - name: goal_id
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["on_track", "at_risk", "behind"]
+      - name: current_label
+        data_tests: [not_null]
+      - name: target_label
+        data_tests: [not_null]
+      - name: status_label
+        data_tests: [not_null]
+
+  - name: mart_actions_this_week
+    description: Three to five plain-English actions written from the marts.
+    columns:
+      - name: action_id
+        data_tests: [unique, not_null]
+      - name: sort_order
+        data_tests: [unique, not_null]
+      - name: section_id
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["customers", "sales-bookings", "sales-win", "marketing", "time-saved", "sales-funnel"]
+      - name: sentence
+        data_tests: [not_null]
+
+  - name: mart_monthly_bookings
+    description: Won ARR by month, with the monthly bookings goal.
+    columns:
+      - name: month_start
+        data_tests: [unique, not_null]
+      - name: bookings_arr
+        data_tests: [not_null]
+      - name: monthly_goal
+        data_tests: [not_null]
+
+  - name: mart_funnel
+    description: How many deals reached each stage since the funnel window opened.
+    columns:
+      - name: stage
+        data_tests: [unique, not_null]
+      - name: stage_rank
+        data_tests: [unique, not_null]
+      - name: reached
+        data_tests: [not_null]
+
+  - name: mart_win_rate
+    description: Closed-won share by segment since the start of the year.
+    columns:
+      - name: segment
+        data_tests: [unique, not_null]
+      - name: win_rate
+        data_tests: [not_null]
+      - name: closed_deals
+        data_tests: [not_null]
+
+  - name: mart_channel_performance
+    description: Spend, opportunities, cost per opportunity, and pipeline by channel this quarter.
+    columns:
+      - name: channel
+        data_tests: [unique, not_null]
+      - name: opportunities
+        data_tests: [not_null]
+      - name: pipeline_arr
+        data_tests: [not_null]
+      - name: cost_per_opportunity
+        data_tests: [not_null]
+
+  - name: mart_account_health
+    description: Adoption, trend, renewal, and a health score for each active account.
+    columns:
+      - name: account_id
+        data_tests: [unique, not_null]
+      - name: trend
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["up", "down", "flat", "new"]
+      - name: health_band
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["healthy", "watch", "risk"]
+      - name: renewal_at_risk
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: mart_time_saved
+    description: One before and after for time on the report, same mix of scans.
+    columns:
+      - name: before_minutes
+        data_tests: [not_null]
+      - name: after_minutes
+        data_tests: [not_null]
+      - name: minutes_faster
+        data_tests: [not_null]
+      - name: caption
+        data_tests: [not_null]

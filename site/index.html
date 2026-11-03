@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Did the new templates actually help?</title>
+  <title>Where the quarter stands</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,122 +11,127 @@
   <div class="wrap">
     <header class="top">
       <p class="kicker">Built for Rad AI by Asad Moulvi</p>
-      <h1>Did the new templates actually help?</h1>
+      <h1>Where the quarter stands</h1>
       <p class="synthetic">All data is synthetic. This is not Rad AI data.</p>
+      <p class="asof" id="asof"></p>
     </header>
 
     <section>
       <h2>Problem</h2>
-      <p>Northbay Radiology Partners turned on new report templates on May 4, 2026 and asked if radiologists were actually finishing reports faster.</p>
+      <p>A team selling radiology AI has to see, in one glance, whether bookings, pipeline, and customer use are keeping up with the quarter.</p>
     </section>
 
     <section>
       <h2>Solution</h2>
-      <p>We compare each modality with itself, then weight those results by the old case mix, so a shift toward more MRI is not read as a change in speed.</p>
-      <div class="cards" id="cards"></div>
-      <p class="quiet" id="quiet"></p>
+      <p>Each tile compares a live number with its goal. The actions are written from those same tables, so the page and the warehouse agree.</p>
     </section>
 
-    <section class="demo">
-      <div class="demo-head">
-        <h2>Demo</h2>
-        <label class="filter" for="modality">Modality
-          <select id="modality">
-            <option value="All">All</option>
-            <option value="CT">CT</option>
-            <option value="MRI">MRI</option>
-            <option value="XR">XR</option>
-            <option value="US">US</option>
-          </select>
-        </label>
-      </div>
-      <p class="quiet" id="showing"></p>
+    <section class="dashboard" id="goals">
+      <h2>Goals</h2>
+      <div class="goals" id="goal-tiles"></div>
+    </section>
 
-      <figure class="panel">
+    <section id="actions">
+      <h2>Actions this week</h2>
+      <ol class="actions" id="action-list"></ol>
+    </section>
+
+    <section id="sales">
+      <h2>Sales</h2>
+
+      <figure class="panel" id="sales-bookings">
         <div class="fighead">
           <div>
-            <h3>Weekly turnaround</h3>
-            <p class="caption" id="cap-trend"></p>
+            <h3>Monthly bookings</h3>
+            <p class="caption" id="cap-bookings"></p>
           </div>
-          <span class="caveat">Last 2 days still loading, excluded.</span>
         </div>
-        <div class="chart-box tall"><canvas id="trend"></canvas></div>
+        <div class="chart-box tall"><canvas id="bookings"></canvas></div>
       </figure>
 
-      <figure class="panel">
+      <figure class="panel" id="sales-funnel">
         <div class="fighead">
           <div>
-            <h3>Raw average vs same mix</h3>
-            <p class="caption" id="cap-compare"></p>
+            <h3>Pipeline funnel</h3>
+            <p class="caption">Deals that reached each stage. The percent is how many of the previous stage made it here.</p>
           </div>
-          <span class="caveat">Last 2 days still loading, excluded.</span>
         </div>
-        <div id="compare"></div>
+        <div id="funnel"></div>
       </figure>
 
-      <figure class="panel">
+      <figure class="panel" id="sales-win">
         <div class="fighead">
           <div>
-            <h3>Weekday and hour</h3>
-            <p class="caption" id="cap-heat"></p>
+            <h3>Win rate by segment</h3>
+            <p class="caption">Closed deals since January. Won divided by won and lost.</p>
           </div>
-          <span class="caveat">Last 2 days still loading, excluded.</span>
         </div>
-        <div class="heat-scroll" id="heat"></div>
+        <div class="win-grid" id="wins"></div>
       </figure>
+    </section>
 
+    <section id="marketing">
+      <h2>Marketing</h2>
       <div class="pair">
         <figure class="panel">
           <div class="fighead">
             <div>
-              <h3>Sites vs the group</h3>
-              <p class="caption" id="cap-sites"></p>
+              <h3>Pipeline by channel</h3>
+              <p class="caption">ARR on opportunities created this quarter that reached a meeting.</p>
             </div>
-            <span class="caveat">Last 2 days still loading, excluded.</span>
           </div>
-          <div class="chart-box"><canvas id="sites"></canvas></div>
+          <div class="chart-box"><canvas id="pipeline"></canvas></div>
         </figure>
-
         <figure class="panel">
           <div class="fighead">
             <div>
-              <h3>Time on the report</h3>
-              <p class="caption" id="cap-box"></p>
+              <h3>Cost per opportunity</h3>
+              <p class="caption">Spend divided by those same opportunities. Lower is better.</p>
             </div>
-            <span class="caveat">Last 2 days still loading, excluded.</span>
           </div>
-          <div id="boxes"></div>
+          <div class="chart-box"><canvas id="cost"></canvas></div>
         </figure>
       </div>
+    </section>
 
+    <section id="customers">
+      <h2>Customers</h2>
       <figure class="panel">
         <div class="fighead">
           <div>
-            <h3>AI impression after launch</h3>
-            <p class="caption" id="cap-ai"></p>
+            <h3>Account health</h3>
+            <p class="caption">Adoption is the share of recent reports that used an AI impression. Down means that share fell by more than 8 points.</p>
           </div>
-          <span class="caveat">Last 2 days still loading, excluded.</span>
         </div>
-        <div class="chart-box"><canvas id="ai"></canvas></div>
+        <div class="health" id="health"></div>
+      </figure>
+
+      <figure class="panel" id="time-saved">
+        <div class="fighead">
+          <div>
+            <h3>Time on the report</h3>
+            <p class="caption" id="cap-saved"></p>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="saved"></canvas></div>
       </figure>
     </section>
 
     <details id="how">
       <summary>How it's built</summary>
       <div class="how-body">
-        <p>The page reads tested marts. A group under 30 studies is marked too few studies and gets no interval. Intervals are a 95% percentile bootstrap with 1,000 resamples and seed 20261103.</p>
+        <p>Goal status and the action list are columns in the warehouse, not text typed into the page.</p>
         <ul>
-          <li>Median report turnaround is minutes from exam completed to signed.</li>
-          <li>Median time on the report is minutes from started to signed. Templates act here, not on the queue.</li>
-          <li>AI impression acceptance is accepted divided by accepted, edited, and rejected.</li>
-          <li>Template usage is the share of studies that used a template.</li>
-          <li id="words-note">Words dictated is the median word count.</li>
-          <li>The case mix change compares inside each modality, then weights by the pre-launch mix.</li>
+          <li>A pace goal is on track when the value is at least 95% of a straight-line pace, at risk from 80% up to that line, and behind below 80%. Day 33 of a 92-day quarter is the line used here.</li>
+          <li>A snapshot goal uses those same cutoffs against the full target. Coverage, retention, adoption, and minutes saved are snapshot goals.</li>
+          <li>Bookings are closed-won ARR since October 1. New logos are first-time customers in that set.</li>
+          <li>Pipeline coverage is open pipeline from the meeting stage on, divided by bookings still left in the quarter.</li>
+          <li>Marketing pipeline counts meetings and later that marketing sourced this quarter. Outbound is not in that goal. It is still on the channel chart.</li>
+          <li>Net revenue retention is this year's ARR for customers who were here a year ago, divided by that older book.</li>
+          <li>AI adoption is the share of reports in the last 30 complete days that used an AI impression. The last two days of the feed are still loading and stay out.</li>
+          <li>Minutes saved takes the mix-adjusted report-time change at Northbay, multiplies by that group's recent studies, and divides by the radiologists who read them.</li>
         </ul>
-        <p>Every customer mart keeps one customer. Test fixtures never land in a mart. The open two days stay out of the metric window.</p>
-        <pre>where customer_id = 'cust_northbay'
-  and is_test_fixture = 0
-  and is_partial_period = 0</pre>
+        <p id="method-stats"></p>
         <p>Definitions live in <code>dbt/models/semantic.yml</code>. A Snowflake row access policy example sits in <code>dbt/analyses</code> and is not executed on DuckDB.</p>
       </div>
     </details>

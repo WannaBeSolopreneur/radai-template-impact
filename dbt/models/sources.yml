@@ -10,3 +10,8 @@ sources:
       - name: radiologists
       - name: studies
       - name: generation_meta
+      - name: accounts
+      - name: opportunities
+      - name: marketing_spend
+      - name: goals
+      - name: quarter

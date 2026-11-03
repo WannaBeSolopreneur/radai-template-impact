@@ -581,6 +581,56 @@ def load_duckdb(cfg: dict, paths: dict[str, Path]) -> None:
             n_redcedar_studies integer,
             n_fixtures integer
         """,
+        "accounts": """
+            account_id varchar,
+            account_name varchar,
+            segment varchar,
+            arr integer,
+            arr_one_year_ago integer,
+            renewal_date date,
+            is_active integer
+        """,
+        "opportunities": """
+            opportunity_id varchar,
+            account_id varchar,
+            prospect_name varchar,
+            segment varchar,
+            stage varchar,
+            furthest_stage varchar,
+            outcome varchar,
+            arr integer,
+            channel varchar,
+            is_marketing_sourced integer,
+            is_new_logo integer,
+            created_at timestamp,
+            closed_at timestamp
+        """,
+        "marketing_spend": """
+            channel varchar,
+            channel_name varchar,
+            spend integer,
+            sort_order integer
+        """,
+        "goals": """
+            goal_id varchar,
+            label varchar,
+            detail varchar,
+            unit varchar,
+            metric_kind varchar,
+            target_value double,
+            sort_order integer
+        """,
+        "quarter": """
+            quarter_start date,
+            quarter_end date,
+            funnel_start date,
+            win_rate_start date,
+            chart_start date,
+            on_track_ratio double,
+            at_risk_ratio double,
+            renewal_horizon_days integer,
+            trend_points double
+        """,
     }
     for name, columns in specs.items():
         con.execute(f"create table raw.{name} ({columns})")
@@ -689,6 +739,11 @@ def main() -> None:
     for fixture in fixture_rows(cfg):
         rows.append([fixture[column] for column in STUDY_HEADER])
 
+    from rad_model.commercial import build_commercial
+
+    extra = build_commercial(RAW_DIR)
+    rows.extend(extra["studies"])
+
     write_table(RAW_DIR / "studies.csv", STUDY_HEADER, rows)
     write_table(
         RAW_DIR / "customers.csv",
@@ -696,7 +751,8 @@ def main() -> None:
         [
             [cfg["customer_id"], cfg["customer_name"]],
             [cfg["other_customer_id"], cfg["other_customer_name"]],
-        ],
+        ]
+        + extra["customers"],
     )
     write_table(
         RAW_DIR / "sites.csv",
@@ -704,7 +760,8 @@ def main() -> None:
         [
             [site["id"], site["customer"], site["name"], site["size"], site["sort"]]
             for site in cfg["sites"]
-        ],
+        ]
+        + extra["sites"],
     )
     rad_rows = []
     for site in cfg["sites"]:
@@ -717,6 +774,7 @@ def main() -> None:
                     f"Rad {i:02d}",
                 ]
             )
+    rad_rows.extend(extra["radiologists"])
     write_table(
         RAW_DIR / "radiologists.csv",
         ["radiologist_id", "customer_id", "site_id", "radiologist_label"],
@@ -765,6 +823,11 @@ def main() -> None:
             "radiologists": RAW_DIR / "radiologists.csv",
             "studies": RAW_DIR / "studies.csv",
             "generation_meta": RAW_DIR / "generation_meta.csv",
+            "accounts": RAW_DIR / "accounts.csv",
+            "opportunities": RAW_DIR / "opportunities.csv",
+            "marketing_spend": RAW_DIR / "marketing_spend.csv",
+            "goals": RAW_DIR / "goals.csv",
+            "quarter": RAW_DIR / "quarter.csv",
         },
     )
     print(f"Loaded {len(rows)} raw study rows.")
