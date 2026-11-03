@@ -228,18 +228,28 @@
   });
 
   const change = data.headlines.reportChange;
-  const slower = Math.abs(change.hi);
-  const faster = Math.abs(change.lo);
-  const low = Math.min(slower, faster);
-  const high = Math.max(slower, faster);
+  const turn = data.headlines.turnaroundChange;
+  const raw = data.headlines.rawTurnaround;
+  const meta = data.meta;
+  const low = Math.min(Math.abs(change.lo), Math.abs(change.hi));
+  const high = Math.max(Math.abs(change.lo), Math.abs(change.hi));
+  const one = function (value) { return Math.abs(value).toFixed(1); };
+  const pct = function (value) { return (value * 100).toFixed(1); };
   document.getElementById("method-stats").textContent =
-    "Same mix of scans, time on the report moved by " +
-    Math.abs(change.value).toFixed(1) +
-    " minutes. A 95% bootstrap interval on that change runs from " +
-    low.toFixed(1) +
-    " to " +
-    high.toFixed(1) +
-    " minutes. The interval uses 1,000 resamples and seed " +
-    data.meta.seed +
-    ". It is not drawn on the chart.";
+    "On " + meta.nStudies.toLocaleString("en-US") +
+    " studies, time on the report moved from " + one(change.before) +
+    " minutes to " + one(change.after) +
+    ", about " + one(change.value) +
+    " minutes faster when each modality is compared with itself and weighted by the pre-launch mix. MRI rose from " +
+    pct(meta.mriBefore) + "% to " + pct(meta.mriAfter) +
+    "%, so the raw turnaround went from " + one(raw.before) +
+    " to " + one(raw.after) +
+    ". Mix-adjusted turnaround still fell, from " + one(turn.before) +
+    " to " + one(turn.after) +
+    ". A 95% bootstrap interval on the report-time change runs from " +
+    low.toFixed(1) + " to " + high.toFixed(1) +
+    " minutes faster, with " + meta.bootstrapDraws.toLocaleString("en-US") +
+    " resamples and seed " + meta.seed +
+    ". It is not drawn on the chart. " + meta.partialStudies +
+    " studies in the last two days are still loading and stay out.";
 })();
