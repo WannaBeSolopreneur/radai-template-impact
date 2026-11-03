@@ -695,3 +695,9 @@ footer { margin-top: 1.6rem; }
   .heat span, .heat div { min-height: 16px; }
   .heat .hour, .heat .day { font-size: 8px; }
 }
+
+details.how-toggle { margin-top: 0; }
+details.how-toggle > summary { list-style: revert; }
+details.how-toggle > summary h2 { margin: 0; }
+.how-hint { font-weight: 400; font-size: 0.85rem; color: #5a6b80; }
+details.how-toggle[open] .how-hint { display: none; }
