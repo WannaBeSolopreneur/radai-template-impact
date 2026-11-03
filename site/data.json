@@ -1,0 +1,8649 @@
+{
+  "meta": {
+    "customer": "Northbay Radiology Partners",
+    "launch": "2026-05-04",
+    "partialStart": "2026-11-01",
+    "asOf": "2026-11-03",
+    "windowStart": "2025-11-03",
+    "windowEnd": "2026-11-02",
+    "nStudies": 36024,
+    "nBefore": 18047,
+    "nAfter": 17977,
+    "partialStudies": 90,
+    "seed": 20261103,
+    "bootstrapDraws": 1000,
+    "minStudies": 30,
+    "mriBefore": 0.1011,
+    "mriAfter": 0.2936,
+    "caveat": "Last 2 days still loading, excluded.",
+    "synthetic": "All data is synthetic. This is not Rad AI data."
+  },
+  "headlines": {
+    "reportChange": {
+      "value": -2.3413,
+      "lo": -2.551,
+      "hi": -2.1863,
+      "before": 13.2993,
+      "after": 10.958
+    },
+    "turnaroundChange": {
+      "value": -3.5793,
+      "lo": -4.5529,
+      "hi": -2.7652,
+      "before": 63.4951,
+      "after": 59.9158
+    },
+    "rawTurnaround": {
+      "before": 45.1333,
+      "after": 58.7333,
+      "change": 13.6
+    },
+    "aiAcceptance": {
+      "value": 0.5988,
+      "lo": 0.591,
+      "hi": 0.6061,
+      "n": 16568
+    },
+    "templateUsage": {
+      "value": 0.9119,
+      "lo": 0.9075,
+      "hi": 0.9161,
+      "n": 17977
+    },
+    "wordsAfter": {
+      "value": 130.0,
+      "lo": 128.0,
+      "hi": 131.0,
+      "n": 17977
+    },
+    "wordsBefore": 113.0
+  },
+  "slices": {
+    "All": {
+      "weekly": [
+        {
+          "week": "2025-11-03",
+          "median": 45.2833,
+          "lo": 42.1973,
+          "hi": 48.9083,
+          "n": 706,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-10",
+          "median": 46.1333,
+          "lo": 43.7117,
+          "hi": 50.6333,
+          "n": 689,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-17",
+          "median": 43.9667,
+          "lo": 40.575,
+          "hi": 46.6008,
+          "n": 688,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-24",
+          "median": 46.5,
+          "lo": 42.2667,
+          "hi": 48.7179,
+          "n": 681,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-01",
+          "median": 43.7833,
+          "lo": 40.8906,
+          "hi": 45.75,
+          "n": 720,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-08",
+          "median": 44.6917,
+          "lo": 42.6833,
+          "hi": 48.75,
+          "n": 702,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-15",
+          "median": 46.2833,
+          "lo": 42.915,
+          "hi": 48.8833,
+          "n": 741,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-22",
+          "median": 46.3833,
+          "lo": 43.6,
+          "hi": 49.7667,
+          "n": 745,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-29",
+          "median": 47.4833,
+          "lo": 44.4333,
+          "hi": 51.2333,
+          "n": 675,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-05",
+          "median": 43.4667,
+          "lo": 40.6667,
+          "hi": 46.0833,
+          "n": 659,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-12",
+          "median": 47.15,
+          "lo": 43.95,
+          "hi": 50.05,
+          "n": 701,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-19",
+          "median": 42.9167,
+          "lo": 39.2325,
+          "hi": 45.45,
+          "n": 725,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-26",
+          "median": 44.35,
+          "lo": 41.6,
+          "hi": 46.6333,
+          "n": 709,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-02",
+          "median": 46.4,
+          "lo": 44.1829,
+          "hi": 51.3,
+          "n": 705,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-09",
+          "median": 47.7667,
+          "lo": 45.1833,
+          "hi": 50.9167,
+          "n": 659,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-16",
+          "median": 45.3583,
+          "lo": 41.2333,
+          "hi": 48.7619,
+          "n": 670,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-23",
+          "median": 42.9833,
+          "lo": 41.1167,
+          "hi": 46.1,
+          "n": 665,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-02",
+          "median": 46.0,
+          "lo": 43.4833,
+          "hi": 48.886,
+          "n": 666,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-09",
+          "median": 43.6917,
+          "lo": 41.1083,
+          "hi": 46.95,
+          "n": 722,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-16",
+          "median": 41.8417,
+          "lo": 40.3902,
+          "hi": 44.6927,
+          "n": 670,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-23",
+          "median": 44.875,
+          "lo": 41.4667,
+          "hi": 47.3517,
+          "n": 680,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-30",
+          "median": 45.525,
+          "lo": 42.7829,
+          "hi": 48.15,
+          "n": 682,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-06",
+          "median": 44.9333,
+          "lo": 41.4667,
+          "hi": 46.9667,
+          "n": 705,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-13",
+          "median": 46.8667,
+          "lo": 43.95,
+          "hi": 50.9167,
+          "n": 727,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-20",
+          "median": 46.0833,
+          "lo": 42.9,
+          "hi": 49.1167,
+          "n": 669,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-27",
+          "median": 45.775,
+          "lo": 42.7917,
+          "hi": 48.9252,
+          "n": 686,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-04",
+          "median": 59.1833,
+          "lo": 53.5333,
+          "hi": 63.8892,
+          "n": 659,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-11",
+          "median": 60.95,
+          "lo": 54.0648,
+          "hi": 66.8167,
+          "n": 696,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-18",
+          "median": 58.8,
+          "lo": 54.8442,
+          "hi": 64.1117,
+          "n": 682,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-25",
+          "median": 58.4,
+          "lo": 53.2998,
+          "hi": 64.15,
+          "n": 720,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-01",
+          "median": 60.2333,
+          "lo": 54.4833,
+          "hi": 66.5371,
+          "n": 693,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-08",
+          "median": 56.9833,
+          "lo": 52.8935,
+          "hi": 62.0035,
+          "n": 658,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-15",
+          "median": 57.9833,
+          "lo": 53.1,
+          "hi": 62.35,
+          "n": 766,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-22",
+          "median": 55.7667,
+          "lo": 50.4333,
+          "hi": 60.3333,
+          "n": 704,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-29",
+          "median": 61.5417,
+          "lo": 56.1658,
+          "hi": 66.7185,
+          "n": 688,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-06",
+          "median": 59.15,
+          "lo": 53.9833,
+          "hi": 64.35,
+          "n": 715,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-13",
+          "median": 52.95,
+          "lo": 48.9333,
+          "hi": 59.125,
+          "n": 678,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-20",
+          "median": 58.125,
+          "lo": 53.1417,
+          "hi": 61.5281,
+          "n": 706,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-27",
+          "median": 55.7833,
+          "lo": 51.4333,
+          "hi": 61.3021,
+          "n": 689,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-03",
+          "median": 61.9,
+          "lo": 55.8333,
+          "hi": 67.2,
+          "n": 707,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-10",
+          "median": 59.2833,
+          "lo": 53.4833,
+          "hi": 64.0083,
+          "n": 688,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-17",
+          "median": 56.0583,
+          "lo": 53.4081,
+          "hi": 60.2013,
+          "n": 656,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-24",
+          "median": 58.1917,
+          "lo": 53.0667,
+          "hi": 62.8131,
+          "n": 692,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-31",
+          "median": 55.65,
+          "lo": 51.3154,
+          "hi": 60.0167,
+          "n": 679,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-07",
+          "median": 56.725,
+          "lo": 53.2833,
+          "hi": 62.4417,
+          "n": 682,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-14",
+          "median": 56.7667,
+          "lo": 51.65,
+          "hi": 60.8029,
+          "n": 703,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-21",
+          "median": 57.9917,
+          "lo": 52.25,
+          "hi": 62.8277,
+          "n": 690,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-28",
+          "median": 66.45,
+          "lo": 61.8583,
+          "hi": 71.6721,
+          "n": 680,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-05",
+          "median": 58.825,
+          "lo": 54.6748,
+          "hi": 65.3923,
+          "n": 720,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-12",
+          "median": 57.9833,
+          "lo": 54.3167,
+          "hi": 62.9,
+          "n": 675,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-19",
+          "median": 61.2833,
+          "lo": 54.6,
+          "hi": 70.5,
+          "n": 699,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-26",
+          "median": 65.7167,
+          "lo": 59.5465,
+          "hi": 74.111,
+          "n": 652,
+          "tooFew": false
+        }
+      ],
+      "sites": [
+        {
+          "id": "site_nb_main",
+          "name": "Main Hospital",
+          "size": "large",
+          "n": 17690,
+          "median": 68.3667,
+          "lo": 67.1402,
+          "hi": 69.6,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_east",
+          "name": "Eastshore Imaging",
+          "size": "large",
+          "n": 8927,
+          "median": 40.1,
+          "lo": 39.3833,
+          "hi": 40.95,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_valley",
+          "name": "Valley Outpatient",
+          "size": "medium",
+          "n": 5113,
+          "median": 36.7,
+          "lo": 36.0333,
+          "hi": 37.5171,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_hill",
+          "name": "Hillcrest Imaging",
+          "size": "small",
+          "n": 4270,
+          "median": 44.75,
+          "lo": 43.8081,
+          "hi": 45.5342,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_pine",
+          "name": "Pine Cove Clinic",
+          "size": "tiny",
+          "n": 24,
+          "median": 31.6167,
+          "lo": null,
+          "hi": null,
+          "tooFew": true
+        }
+      ],
+      "groupMedian": 50.4333,
+      "heatmap": [
+        {
+          "dow": 0,
+          "hour": 0,
+          "median": 42.0833,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 1,
+          "median": 67.75,
+          "n": 31,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 2,
+          "median": 40.8167,
+          "n": 26,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 3,
+          "median": 29.25,
+          "n": 32,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 4,
+          "median": 42.175,
+          "n": 40,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 5,
+          "median": 43.1667,
+          "n": 52,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 6,
+          "median": 58.7333,
+          "n": 187,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 7,
+          "median": 72.5167,
+          "n": 530,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 8,
+          "median": 71.8333,
+          "n": 756,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 9,
+          "median": 61.7333,
+          "n": 839,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 10,
+          "median": 58.4,
+          "n": 781,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 11,
+          "median": 55.95,
+          "n": 657,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 12,
+          "median": 52.4,
+          "n": 612,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 13,
+          "median": 56.8417,
+          "n": 632,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 14,
+          "median": 56.2833,
+          "n": 628,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 15,
+          "median": 64.6667,
+          "n": 575,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 16,
+          "median": 66.0167,
+          "n": 471,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 17,
+          "median": 64.1833,
+          "n": 290,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 18,
+          "median": 61.85,
+          "n": 186,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 19,
+          "median": 51.625,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 20,
+          "median": 49.25,
+          "n": 77,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 21,
+          "median": 37.2167,
+          "n": 73,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 22,
+          "median": 36.9167,
+          "n": 55,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 23,
+          "median": 44.725,
+          "n": 50,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 0,
+          "median": 33.6333,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 1,
+          "median": 39.475,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 2,
+          "median": 29.6167,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 3,
+          "median": 41.3583,
+          "n": 34,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 4,
+          "median": 27.6167,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 5,
+          "median": 36.85,
+          "n": 43,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 6,
+          "median": 43.775,
+          "n": 178,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 7,
+          "median": 71.4667,
+          "n": 501,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 8,
+          "median": 59.525,
+          "n": 676,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 9,
+          "median": 57.25,
+          "n": 799,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 10,
+          "median": 51.6333,
+          "n": 683,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 11,
+          "median": 49.6333,
+          "n": 642,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 12,
+          "median": 50.85,
+          "n": 566,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 13,
+          "median": 50.6917,
+          "n": 600,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 14,
+          "median": 50.3667,
+          "n": 616,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 15,
+          "median": 53.8333,
+          "n": 583,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 16,
+          "median": 60.2,
+          "n": 432,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 17,
+          "median": 56.125,
+          "n": 256,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 18,
+          "median": 55.925,
+          "n": 152,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 19,
+          "median": 37.7,
+          "n": 122,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 20,
+          "median": 46.0333,
+          "n": 78,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 21,
+          "median": 38.375,
+          "n": 72,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 22,
+          "median": 35.5667,
+          "n": 58,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 23,
+          "median": 33.95,
+          "n": 48,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 0,
+          "median": 33.4917,
+          "n": 44,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 1,
+          "median": 34.3833,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 2,
+          "median": 37.2,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 3,
+          "median": 33.3333,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 4,
+          "median": 34.9,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 5,
+          "median": 35.425,
+          "n": 40,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 6,
+          "median": 41.6167,
+          "n": 151,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 7,
+          "median": 58.475,
+          "n": 474,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 8,
+          "median": 55.9417,
+          "n": 696,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 9,
+          "median": 51.7667,
+          "n": 696,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 10,
+          "median": 49.4,
+          "n": 613,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 11,
+          "median": 47.55,
+          "n": 603,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 12,
+          "median": 49.7333,
+          "n": 539,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 13,
+          "median": 48.1667,
+          "n": 537,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 14,
+          "median": 45.9417,
+          "n": 522,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 15,
+          "median": 47.5333,
+          "n": 495,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 16,
+          "median": 45.3667,
+          "n": 365,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 17,
+          "median": 57.2417,
+          "n": 264,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 18,
+          "median": 42.05,
+          "n": 144,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 19,
+          "median": 39.1083,
+          "n": 98,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 20,
+          "median": 34.7333,
+          "n": 72,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 21,
+          "median": 47.2667,
+          "n": 64,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 22,
+          "median": 36.4167,
+          "n": 49,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 23,
+          "median": 28.225,
+          "n": 38,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 0,
+          "median": 29.5833,
+          "n": 52,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 1,
+          "median": 33.0833,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 2,
+          "median": 29.3333,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 3,
+          "median": 32.45,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 4,
+          "median": 36.4333,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 5,
+          "median": 35.35,
+          "n": 41,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 6,
+          "median": 42.9167,
+          "n": 161,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 7,
+          "median": 61.6667,
+          "n": 467,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 8,
+          "median": 54.4417,
+          "n": 654,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 9,
+          "median": 52.25,
+          "n": 707,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 10,
+          "median": 43.4167,
+          "n": 597,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 11,
+          "median": 49.6833,
+          "n": 563,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 12,
+          "median": 45.9083,
+          "n": 534,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 13,
+          "median": 48.2333,
+          "n": 507,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 14,
+          "median": 45.1667,
+          "n": 537,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 15,
+          "median": 47.8,
+          "n": 488,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 16,
+          "median": 50.8167,
+          "n": 393,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 17,
+          "median": 60.5417,
+          "n": 240,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 18,
+          "median": 54.5333,
+          "n": 165,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 19,
+          "median": 38.15,
+          "n": 93,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 20,
+          "median": 31.7833,
+          "n": 79,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 21,
+          "median": 36.4167,
+          "n": 63,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 22,
+          "median": 40.8833,
+          "n": 49,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 23,
+          "median": 36.1917,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 0,
+          "median": 37.7333,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 1,
+          "median": 37.0083,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 2,
+          "median": 69.0667,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 3,
+          "median": 35.7833,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 4,
+          "median": 29.1167,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 5,
+          "median": 30.7667,
+          "n": 33,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 6,
+          "median": 42.15,
+          "n": 130,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 7,
+          "median": 58.5,
+          "n": 392,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 8,
+          "median": 54.6333,
+          "n": 541,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 9,
+          "median": 43.6333,
+          "n": 606,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 10,
+          "median": 43.55,
+          "n": 573,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 11,
+          "median": 43.0167,
+          "n": 505,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 12,
+          "median": 45.4833,
+          "n": 482,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 13,
+          "median": 45.6667,
+          "n": 456,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 14,
+          "median": 42.6833,
+          "n": 495,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 15,
+          "median": 47.1667,
+          "n": 413,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 16,
+          "median": 48.5167,
+          "n": 326,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 17,
+          "median": 49.4167,
+          "n": 222,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 18,
+          "median": 48.6833,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 19,
+          "median": 37.6333,
+          "n": 70,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 20,
+          "median": 36.0667,
+          "n": 69,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 21,
+          "median": 35.0833,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 22,
+          "median": 40.0,
+          "n": 44,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 23,
+          "median": 34.625,
+          "n": 40,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 0,
+          "median": 34.8667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 1,
+          "median": 25.8833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 2,
+          "median": 24.0833,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 3,
+          "median": 28.6167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 4,
+          "median": 28.5,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 5,
+          "median": 36.4333,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 6,
+          "median": 48.5,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 7,
+          "median": 45.9917,
+          "n": 86,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 8,
+          "median": 37.7333,
+          "n": 122,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 9,
+          "median": 30.15,
+          "n": 144,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 10,
+          "median": 34.25,
+          "n": 111,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 11,
+          "median": 36.1333,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 12,
+          "median": 33.0,
+          "n": 94,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 13,
+          "median": 31.45,
+          "n": 92,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 14,
+          "median": 32.8833,
+          "n": 101,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 15,
+          "median": 35.9917,
+          "n": 108,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 16,
+          "median": 42.975,
+          "n": 76,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 17,
+          "median": 39.9,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 18,
+          "median": 41.3583,
+          "n": 38,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 19,
+          "median": 37.1,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 20,
+          "median": 22.55,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 21,
+          "median": 21.2333,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 22,
+          "median": 26.6833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 23,
+          "median": 60.1167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 0,
+          "median": 38.6167,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 1,
+          "median": 17.75,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 2,
+          "median": 32.4667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 3,
+          "median": 29.8667,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 4,
+          "median": 36.2417,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 5,
+          "median": 27.7833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 6,
+          "median": 52.4333,
+          "n": 23,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 7,
+          "median": 43.4,
+          "n": 66,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 8,
+          "median": 41.65,
+          "n": 91,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 9,
+          "median": 41.0,
+          "n": 118,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 10,
+          "median": 30.8083,
+          "n": 104,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 11,
+          "median": 31.0333,
+          "n": 78,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 12,
+          "median": 29.525,
+          "n": 78,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 13,
+          "median": 31.95,
+          "n": 85,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 14,
+          "median": 31.525,
+          "n": 96,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 15,
+          "median": 33.1333,
+          "n": 72,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 16,
+          "median": 36.15,
+          "n": 55,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 17,
+          "median": 41.0167,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 18,
+          "median": 27.7167,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 19,
+          "median": 28.1833,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 20,
+          "median": 49.4083,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 21,
+          "median": 26.1833,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 22,
+          "median": 25.05,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 23,
+          "median": 29.6917,
+          "n": 10,
+          "tooFew": true
+        }
+      ],
+      "boxes": [
+        {
+          "modality": "CT",
+          "period": "after",
+          "n": 4437,
+          "p10": 7.7333,
+          "p25": 10.4167,
+          "p50": 14.5667,
+          "p75": 20.3,
+          "p90": 28.7967,
+          "tooFew": false
+        },
+        {
+          "modality": "CT",
+          "period": "before",
+          "n": 4489,
+          "p10": 9.5167,
+          "p25": 12.8,
+          "p50": 17.85,
+          "p75": 25.1,
+          "p90": 35.0833,
+          "tooFew": false
+        },
+        {
+          "modality": "MRI",
+          "period": "after",
+          "n": 5278,
+          "p10": 11.1833,
+          "p25": 15.15,
+          "p50": 21.4,
+          "p75": 30.2667,
+          "p90": 42.5733,
+          "tooFew": false
+        },
+        {
+          "modality": "MRI",
+          "period": "before",
+          "n": 1825,
+          "p10": 13.3667,
+          "p25": 18.1833,
+          "p50": 25.2333,
+          "p75": 35.3167,
+          "p90": 49.29,
+          "tooFew": false
+        },
+        {
+          "modality": "US",
+          "period": "after",
+          "n": 2804,
+          "p10": 5.5217,
+          "p25": 7.5167,
+          "p50": 10.4333,
+          "p75": 14.7,
+          "p90": 20.8,
+          "tooFew": false
+        },
+        {
+          "modality": "US",
+          "period": "before",
+          "n": 3612,
+          "p10": 6.7,
+          "p25": 9.1667,
+          "p50": 12.5167,
+          "p75": 17.7542,
+          "p90": 24.6483,
+          "tooFew": false
+        },
+        {
+          "modality": "XR",
+          "period": "after",
+          "n": 5458,
+          "p10": 3.6167,
+          "p25": 4.9,
+          "p50": 6.85,
+          "p75": 9.6458,
+          "p90": 13.6767,
+          "tooFew": false
+        },
+        {
+          "modality": "XR",
+          "period": "before",
+          "n": 8121,
+          "p10": 4.65,
+          "p25": 6.1333,
+          "p50": 8.45,
+          "p75": 11.9667,
+          "p90": 16.4833,
+          "tooFew": false
+        }
+      ],
+      "compare": {
+        "mode": "mix",
+        "rawBefore": {
+          "value": 45.1333,
+          "lo": 44.65,
+          "hi": 45.6667,
+          "n": 18047
+        },
+        "rawAfter": {
+          "value": 58.7333,
+          "lo": 57.7167,
+          "hi": 59.6833,
+          "n": 17977
+        },
+        "adjBefore": {
+          "value": 63.4951,
+          "lo": 62.8421,
+          "hi": 64.3065
+        },
+        "adjAfter": {
+          "value": 59.9158,
+          "lo": 59.4239,
+          "hi": 60.4633
+        }
+      },
+      "ai": [
+        {
+          "specialty": "Abdomen",
+          "accepted": 2637,
+          "edited": 1228,
+          "rejected": 477,
+          "n": 4342,
+          "tooFew": false
+        },
+        {
+          "specialty": "Spine",
+          "accepted": 1495,
+          "edited": 695,
+          "rejected": 289,
+          "n": 2479,
+          "tooFew": false
+        },
+        {
+          "specialty": "MSK",
+          "accepted": 1501,
+          "edited": 628,
+          "rejected": 250,
+          "n": 2379,
+          "tooFew": false
+        },
+        {
+          "specialty": "Chest",
+          "accepted": 1405,
+          "edited": 682,
+          "rejected": 276,
+          "n": 2363,
+          "tooFew": false
+        },
+        {
+          "specialty": "Neuro",
+          "accepted": 1178,
+          "edited": 769,
+          "rejected": 308,
+          "n": 2255,
+          "tooFew": false
+        },
+        {
+          "specialty": "Pelvis",
+          "accepted": 1090,
+          "edited": 530,
+          "rejected": 232,
+          "n": 1852,
+          "tooFew": false
+        },
+        {
+          "specialty": "Breast",
+          "accepted": 615,
+          "edited": 208,
+          "rejected": 75,
+          "n": 898,
+          "tooFew": false
+        }
+      ]
+    },
+    "CT": {
+      "weekly": [
+        {
+          "week": "2025-11-03",
+          "median": 69.225,
+          "lo": 62.8917,
+          "hi": 74.816,
+          "n": 172,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-10",
+          "median": 68.9333,
+          "lo": 64.4298,
+          "hi": 74.2667,
+          "n": 184,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-17",
+          "median": 63.9917,
+          "lo": 60.85,
+          "hi": 68.9,
+          "n": 158,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-24",
+          "median": 68.425,
+          "lo": 63.8188,
+          "hi": 73.6433,
+          "n": 162,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-01",
+          "median": 66.7417,
+          "lo": 61.2,
+          "hi": 74.6833,
+          "n": 164,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-08",
+          "median": 68.1833,
+          "lo": 64.6333,
+          "hi": 74.2025,
+          "n": 188,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-15",
+          "median": 73.5333,
+          "lo": 67.5333,
+          "hi": 76.8333,
+          "n": 175,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-22",
+          "median": 73.5,
+          "lo": 68.9971,
+          "hi": 80.6058,
+          "n": 202,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-29",
+          "median": 69.5333,
+          "lo": 65.6667,
+          "hi": 76.65,
+          "n": 185,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-05",
+          "median": 76.4583,
+          "lo": 70.8583,
+          "hi": 84.5352,
+          "n": 142,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-12",
+          "median": 73.35,
+          "lo": 67.6667,
+          "hi": 78.0167,
+          "n": 167,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-19",
+          "median": 68.4083,
+          "lo": 63.8667,
+          "hi": 72.7667,
+          "n": 164,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-26",
+          "median": 63.45,
+          "lo": 58.8167,
+          "hi": 72.7,
+          "n": 177,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-02",
+          "median": 70.7917,
+          "lo": 64.9804,
+          "hi": 76.3167,
+          "n": 196,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-09",
+          "median": 73.525,
+          "lo": 64.5467,
+          "hi": 82.2537,
+          "n": 180,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-16",
+          "median": 75.5,
+          "lo": 66.5,
+          "hi": 80.5333,
+          "n": 143,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-23",
+          "median": 68.4167,
+          "lo": 64.3404,
+          "hi": 76.15,
+          "n": 149,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-02",
+          "median": 70.0917,
+          "lo": 63.9333,
+          "hi": 74.1008,
+          "n": 182,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-09",
+          "median": 69.7417,
+          "lo": 66.0833,
+          "hi": 76.5646,
+          "n": 170,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-16",
+          "median": 71.95,
+          "lo": 65.0,
+          "hi": 79.65,
+          "n": 143,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-23",
+          "median": 73.9,
+          "lo": 69.8167,
+          "hi": 78.8167,
+          "n": 181,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-30",
+          "median": 76.3,
+          "lo": 71.1,
+          "hi": 81.25,
+          "n": 185,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-06",
+          "median": 69.3667,
+          "lo": 65.4329,
+          "hi": 75.6175,
+          "n": 176,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-13",
+          "median": 68.3667,
+          "lo": 63.15,
+          "hi": 73.5833,
+          "n": 193,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-20",
+          "median": 74.0583,
+          "lo": 69.5167,
+          "hi": 79.6833,
+          "n": 172,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-27",
+          "median": 63.4667,
+          "lo": 58.4833,
+          "hi": 68.9667,
+          "n": 179,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-04",
+          "median": 69.0,
+          "lo": 64.2167,
+          "hi": 74.1333,
+          "n": 157,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-11",
+          "median": 68.1,
+          "lo": 62.3667,
+          "hi": 73.2175,
+          "n": 163,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-18",
+          "median": 67.5,
+          "lo": 62.8,
+          "hi": 72.7833,
+          "n": 173,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-25",
+          "median": 67.8167,
+          "lo": 62.15,
+          "hi": 71.1525,
+          "n": 181,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-01",
+          "median": 70.4667,
+          "lo": 66.8946,
+          "hi": 76.85,
+          "n": 169,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-08",
+          "median": 67.4417,
+          "lo": 60.875,
+          "hi": 72.9167,
+          "n": 152,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-15",
+          "median": 65.775,
+          "lo": 58.9667,
+          "hi": 73.0448,
+          "n": 178,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-22",
+          "median": 68.6667,
+          "lo": 59.2833,
+          "hi": 73.2,
+          "n": 161,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-29",
+          "median": 67.3833,
+          "lo": 64.3665,
+          "hi": 71.2258,
+          "n": 174,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-06",
+          "median": 68.0917,
+          "lo": 64.2667,
+          "hi": 75.2675,
+          "n": 178,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-13",
+          "median": 65.0333,
+          "lo": 57.5583,
+          "hi": 69.7333,
+          "n": 172,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-20",
+          "median": 62.8083,
+          "lo": 59.5167,
+          "hi": 67.7833,
+          "n": 160,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-27",
+          "median": 66.7667,
+          "lo": 58.5333,
+          "hi": 70.0917,
+          "n": 190,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-03",
+          "median": 65.4167,
+          "lo": 61.9,
+          "hi": 72.95,
+          "n": 177,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-10",
+          "median": 63.825,
+          "lo": 59.3417,
+          "hi": 71.8917,
+          "n": 170,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-17",
+          "median": 60.9667,
+          "lo": 56.65,
+          "hi": 64.8929,
+          "n": 174,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-24",
+          "median": 64.275,
+          "lo": 59.7,
+          "hi": 71.0444,
+          "n": 180,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-31",
+          "median": 60.4,
+          "lo": 54.075,
+          "hi": 65.5917,
+          "n": 174,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-07",
+          "median": 66.2667,
+          "lo": 61.65,
+          "hi": 71.9167,
+          "n": 171,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-14",
+          "median": 64.8667,
+          "lo": 59.8167,
+          "hi": 70.6833,
+          "n": 157,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-21",
+          "median": 65.9833,
+          "lo": 60.4,
+          "hi": 70.9833,
+          "n": 191,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-28",
+          "median": 67.425,
+          "lo": 62.35,
+          "hi": 73.1167,
+          "n": 152,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-05",
+          "median": 63.7667,
+          "lo": 58.7833,
+          "hi": 70.5833,
+          "n": 183,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-12",
+          "median": 64.9167,
+          "lo": 61.3827,
+          "hi": 72.2667,
+          "n": 166,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-19",
+          "median": 67.6583,
+          "lo": 60.8667,
+          "hi": 73.8167,
+          "n": 158,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-26",
+          "median": 72.7167,
+          "lo": 65.4323,
+          "hi": 78.7225,
+          "n": 176,
+          "tooFew": false
+        }
+      ],
+      "sites": [
+        {
+          "id": "site_nb_main",
+          "name": "Main Hospital",
+          "size": "large",
+          "n": 5554,
+          "median": 74.325,
+          "lo": 73.325,
+          "hi": 75.3504,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_east",
+          "name": "Eastshore Imaging",
+          "size": "large",
+          "n": 2129,
+          "median": 57.7667,
+          "lo": 56.5983,
+          "hi": 59.3,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_valley",
+          "name": "Valley Outpatient",
+          "size": "medium",
+          "n": 876,
+          "median": 63.1583,
+          "lo": 61.6083,
+          "hi": 66.1421,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_hill",
+          "name": "Hillcrest Imaging",
+          "size": "small",
+          "n": 365,
+          "median": 65.9333,
+          "lo": 62.2667,
+          "hi": 69.9167,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_pine",
+          "name": "Pine Cove Clinic",
+          "size": "tiny",
+          "n": 2,
+          "median": 103.2333,
+          "lo": null,
+          "hi": null,
+          "tooFew": true
+        }
+      ],
+      "groupMedian": 68.3667,
+      "heatmap": [
+        {
+          "dow": 0,
+          "hour": 0,
+          "median": 55.5667,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 1,
+          "median": 68.9833,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 2,
+          "median": 52.1917,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 3,
+          "median": 75.3667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 4,
+          "median": 50.9,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 5,
+          "median": 61.2,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 6,
+          "median": 85.3083,
+          "n": 44,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 7,
+          "median": 101.5417,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 8,
+          "median": 99.3167,
+          "n": 195,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 9,
+          "median": 86.425,
+          "n": 204,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 10,
+          "median": 77.525,
+          "n": 198,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 11,
+          "median": 73.5333,
+          "n": 153,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 12,
+          "median": 75.6417,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 13,
+          "median": 80.6917,
+          "n": 150,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 14,
+          "median": 73.5333,
+          "n": 157,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 15,
+          "median": 86.1333,
+          "n": 151,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 16,
+          "median": 91.3167,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 17,
+          "median": 92.0333,
+          "n": 76,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 18,
+          "median": 73.1,
+          "n": 47,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 19,
+          "median": 63.6917,
+          "n": 30,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 20,
+          "median": 65.5167,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 21,
+          "median": 67.9667,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 22,
+          "median": 75.15,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 23,
+          "median": 55.6167,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 0,
+          "median": 35.0167,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 1,
+          "median": 61.0583,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 2,
+          "median": 46.95,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 3,
+          "median": 48.8917,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 4,
+          "median": 52.625,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 5,
+          "median": 49.7167,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 6,
+          "median": 78.0833,
+          "n": 35,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 7,
+          "median": 88.9667,
+          "n": 123,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 8,
+          "median": 79.3917,
+          "n": 166,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 9,
+          "median": 73.425,
+          "n": 214,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 10,
+          "median": 65.0833,
+          "n": 193,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 11,
+          "median": 66.2833,
+          "n": 165,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 12,
+          "median": 68.2,
+          "n": 133,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 13,
+          "median": 65.4,
+          "n": 151,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 14,
+          "median": 74.2,
+          "n": 128,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 15,
+          "median": 80.9667,
+          "n": 142,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 16,
+          "median": 78.5417,
+          "n": 100,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 17,
+          "median": 73.9667,
+          "n": 63,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 18,
+          "median": 68.7833,
+          "n": 41,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 19,
+          "median": 55.7833,
+          "n": 23,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 20,
+          "median": 62.4417,
+          "n": 26,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 21,
+          "median": 45.675,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 22,
+          "median": 48.0333,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 23,
+          "median": 77.7667,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 0,
+          "median": 57.65,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 1,
+          "median": 59.9167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 2,
+          "median": 27.6667,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 3,
+          "median": 39.1167,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 4,
+          "median": 63.5833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 5,
+          "median": 44.2583,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 6,
+          "median": 54.85,
+          "n": 40,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 7,
+          "median": 77.2417,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 8,
+          "median": 83.5917,
+          "n": 170,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 9,
+          "median": 66.3667,
+          "n": 173,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 10,
+          "median": 62.3167,
+          "n": 155,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 11,
+          "median": 64.2917,
+          "n": 158,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 12,
+          "median": 62.55,
+          "n": 144,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 13,
+          "median": 64.3083,
+          "n": 132,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 14,
+          "median": 62.0417,
+          "n": 132,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 15,
+          "median": 66.0333,
+          "n": 123,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 16,
+          "median": 78.6667,
+          "n": 83,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 17,
+          "median": 74.0,
+          "n": 74,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 18,
+          "median": 70.625,
+          "n": 30,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 19,
+          "median": 59.5333,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 20,
+          "median": 48.0833,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 21,
+          "median": 65.7333,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 22,
+          "median": 54.8,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 23,
+          "median": 63.3667,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 0,
+          "median": 39.4917,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 1,
+          "median": 48.9333,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 2,
+          "median": 32.7,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 3,
+          "median": 37.65,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 4,
+          "median": 53.8,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 5,
+          "median": 45.2167,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 6,
+          "median": 38.65,
+          "n": 49,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 7,
+          "median": 79.8167,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 8,
+          "median": 73.1,
+          "n": 151,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 9,
+          "median": 67.5167,
+          "n": 182,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 10,
+          "median": 64.4833,
+          "n": 137,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 11,
+          "median": 60.6667,
+          "n": 147,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 12,
+          "median": 66.975,
+          "n": 120,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 13,
+          "median": 62.1333,
+          "n": 127,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 14,
+          "median": 64.6833,
+          "n": 136,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 15,
+          "median": 61.4,
+          "n": 103,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 16,
+          "median": 74.45,
+          "n": 98,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 17,
+          "median": 77.4667,
+          "n": 69,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 18,
+          "median": 61.3333,
+          "n": 37,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 19,
+          "median": 56.325,
+          "n": 26,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 20,
+          "median": 45.5333,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 21,
+          "median": 62.0167,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 22,
+          "median": 41.65,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 23,
+          "median": 49.2167,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 0,
+          "median": 42.9917,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 1,
+          "median": 37.1417,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 2,
+          "median": 75.7667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 3,
+          "median": 37.6667,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 4,
+          "median": 30.6,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 5,
+          "median": 39.4583,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 6,
+          "median": 56.6667,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 7,
+          "median": 81.2083,
+          "n": 120,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 8,
+          "median": 73.4,
+          "n": 142,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 9,
+          "median": 64.4083,
+          "n": 138,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 10,
+          "median": 59.9667,
+          "n": 131,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 11,
+          "median": 65.3667,
+          "n": 107,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 12,
+          "median": 59.3167,
+          "n": 119,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 13,
+          "median": 62.4,
+          "n": 115,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 14,
+          "median": 59.1667,
+          "n": 130,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 15,
+          "median": 60.25,
+          "n": 87,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 16,
+          "median": 70.7667,
+          "n": 87,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 17,
+          "median": 66.625,
+          "n": 62,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 18,
+          "median": 77.0167,
+          "n": 33,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 19,
+          "median": 43.2667,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 20,
+          "median": 40.4667,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 21,
+          "median": 48.0167,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 22,
+          "median": 46.1833,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 23,
+          "median": 56.8583,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 0,
+          "median": 31.95,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 1,
+          "median": 30.325,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 2,
+          "median": 23.0083,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 3,
+          "median": 29.0833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 4,
+          "median": 28.5,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 5,
+          "median": 32.1083,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 6,
+          "median": 46.525,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 7,
+          "median": 65.9417,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 8,
+          "median": 52.55,
+          "n": 37,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 9,
+          "median": 49.9667,
+          "n": 33,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 10,
+          "median": 39.8667,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 11,
+          "median": 44.6667,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 12,
+          "median": 42.5583,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 13,
+          "median": 39.85,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 14,
+          "median": 38.0083,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 15,
+          "median": 53.125,
+          "n": 34,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 16,
+          "median": 60.95,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 17,
+          "median": 51.6667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 18,
+          "median": 42.2333,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 19,
+          "median": 47.2333,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 20,
+          "median": 34.4417,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 21,
+          "median": 21.8833,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 22,
+          "median": 42.3167,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 23,
+          "median": 35.1167,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 0,
+          "median": 38.6167,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 1,
+          "median": 23.0833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 2,
+          "median": 56.0833,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 4,
+          "median": 55.9333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 6,
+          "median": 59.0333,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 7,
+          "median": 54.0583,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 8,
+          "median": 59.9667,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 9,
+          "median": 46.3833,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 10,
+          "median": 40.3417,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 11,
+          "median": 35.6,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 12,
+          "median": 34.5667,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 13,
+          "median": 39.3667,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 14,
+          "median": 57.2917,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 15,
+          "median": 43.45,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 16,
+          "median": 41.4,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 17,
+          "median": 49.15,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 18,
+          "median": 62.0833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 19,
+          "median": 38.15,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 20,
+          "median": 54.65,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 21,
+          "median": 37.025,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 22,
+          "median": 52.3667,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 23,
+          "median": 72.6667,
+          "n": 2,
+          "tooFew": true
+        }
+      ],
+      "boxes": [
+        {
+          "modality": "CT",
+          "period": "after",
+          "n": 4437,
+          "p10": 7.7333,
+          "p25": 10.4167,
+          "p50": 14.5667,
+          "p75": 20.3,
+          "p90": 28.7967,
+          "tooFew": false
+        },
+        {
+          "modality": "CT",
+          "period": "before",
+          "n": 4489,
+          "p10": 9.5167,
+          "p25": 12.8,
+          "p50": 17.85,
+          "p75": 25.1,
+          "p90": 35.0833,
+          "tooFew": false
+        }
+      ],
+      "compare": {
+        "mode": "one",
+        "rawBefore": {
+          "value": 70.3167,
+          "lo": 69.2333,
+          "hi": 71.5167,
+          "n": 4489
+        },
+        "rawAfter": {
+          "value": 66.4167,
+          "lo": 65.2496,
+          "hi": 67.45,
+          "n": 4437
+        }
+      },
+      "ai": [
+        {
+          "specialty": "Abdomen",
+          "accepted": 626,
+          "edited": 303,
+          "rejected": 125,
+          "n": 1054,
+          "tooFew": false
+        },
+        {
+          "specialty": "Chest",
+          "accepted": 635,
+          "edited": 279,
+          "rejected": 130,
+          "n": 1044,
+          "tooFew": false
+        },
+        {
+          "specialty": "Neuro",
+          "accepted": 519,
+          "edited": 354,
+          "rejected": 133,
+          "n": 1006,
+          "tooFew": false
+        },
+        {
+          "specialty": "Pelvis",
+          "accepted": 593,
+          "edited": 273,
+          "rejected": 134,
+          "n": 1000,
+          "tooFew": false
+        }
+      ]
+    },
+    "MRI": {
+      "weekly": [
+        {
+          "week": "2025-11-03",
+          "median": 229.3167,
+          "lo": 190.4333,
+          "hi": 255.75,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-10",
+          "median": 240.9167,
+          "lo": 204.25,
+          "hi": 253.85,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-17",
+          "median": 205.9167,
+          "lo": 178.3667,
+          "hi": 241.5167,
+          "n": 73,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-24",
+          "median": 220.7667,
+          "lo": 201.6833,
+          "hi": 248.4023,
+          "n": 72,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-01",
+          "median": 222.7167,
+          "lo": 199.4167,
+          "hi": 245.5583,
+          "n": 78,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-08",
+          "median": 227.2083,
+          "lo": 174.1,
+          "hi": 250.8583,
+          "n": 74,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-15",
+          "median": 241.325,
+          "lo": 217.7917,
+          "hi": 262.4333,
+          "n": 72,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-22",
+          "median": 241.7333,
+          "lo": 219.5833,
+          "hi": 292.8092,
+          "n": 57,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-29",
+          "median": 201.7667,
+          "lo": 173.7833,
+          "hi": 232.65,
+          "n": 69,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-05",
+          "median": 231.65,
+          "lo": 187.1333,
+          "hi": 249.6833,
+          "n": 63,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-12",
+          "median": 233.7583,
+          "lo": 202.5667,
+          "hi": 277.8333,
+          "n": 76,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-19",
+          "median": 217.8667,
+          "lo": 170.4667,
+          "hi": 234.7333,
+          "n": 69,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-26",
+          "median": 190.5167,
+          "lo": 174.8167,
+          "hi": 246.3,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-02",
+          "median": 233.7,
+          "lo": 214.8,
+          "hi": 266.7833,
+          "n": 65,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-09",
+          "median": 229.6667,
+          "lo": 196.15,
+          "hi": 262.05,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-16",
+          "median": 217.0833,
+          "lo": 191.2667,
+          "hi": 251.6833,
+          "n": 81,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-23",
+          "median": 215.85,
+          "lo": 189.2333,
+          "hi": 254.8667,
+          "n": 70,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-02",
+          "median": 226.85,
+          "lo": 192.9833,
+          "hi": 250.4558,
+          "n": 62,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-09",
+          "median": 241.8083,
+          "lo": 216.3283,
+          "hi": 263.9679,
+          "n": 82,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-16",
+          "median": 211.7417,
+          "lo": 180.6167,
+          "hi": 250.4667,
+          "n": 60,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-23",
+          "median": 219.6833,
+          "lo": 171.2833,
+          "hi": 237.8333,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-30",
+          "median": 201.6167,
+          "lo": 174.3,
+          "hi": 231.6,
+          "n": 61,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-06",
+          "median": 185.6333,
+          "lo": 135.9833,
+          "hi": 223.2,
+          "n": 77,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-13",
+          "median": 209.35,
+          "lo": 191.1,
+          "hi": 224.3833,
+          "n": 79,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-20",
+          "median": 213.2833,
+          "lo": 188.5,
+          "hi": 233.0333,
+          "n": 83,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-27",
+          "median": 208.85,
+          "lo": 177.5667,
+          "hi": 250.9333,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-04",
+          "median": 219.05,
+          "lo": 206.3179,
+          "hi": 229.6167,
+          "n": 193,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-11",
+          "median": 206.1333,
+          "lo": 193.8083,
+          "hi": 227.7773,
+          "n": 222,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-18",
+          "median": 217.4667,
+          "lo": 197.4865,
+          "hi": 245.4,
+          "n": 198,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-25",
+          "median": 212.4583,
+          "lo": 191.9,
+          "hi": 224.809,
+          "n": 214,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-01",
+          "median": 195.35,
+          "lo": 181.95,
+          "hi": 215.45,
+          "n": 197,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-08",
+          "median": 217.3833,
+          "lo": 206.7833,
+          "hi": 238.245,
+          "n": 188,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-15",
+          "median": 220.85,
+          "lo": 199.8667,
+          "hi": 239.2556,
+          "n": 230,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-22",
+          "median": 211.275,
+          "lo": 194.35,
+          "hi": 219.9465,
+          "n": 202,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-29",
+          "median": 215.8583,
+          "lo": 197.7994,
+          "hi": 232.796,
+          "n": 210,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-06",
+          "median": 211.9,
+          "lo": 192.5167,
+          "hi": 231.45,
+          "n": 205,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-13",
+          "median": 205.0,
+          "lo": 195.8833,
+          "hi": 225.25,
+          "n": 175,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-20",
+          "median": 209.1667,
+          "lo": 195.95,
+          "hi": 217.2833,
+          "n": 221,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-27",
+          "median": 202.6833,
+          "lo": 189.6621,
+          "hi": 218.1667,
+          "n": 185,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-03",
+          "median": 203.6083,
+          "lo": 184.35,
+          "hi": 231.2192,
+          "n": 210,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-10",
+          "median": 190.6833,
+          "lo": 179.4167,
+          "hi": 216.7667,
+          "n": 205,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-17",
+          "median": 204.9333,
+          "lo": 187.1667,
+          "hi": 226.5,
+          "n": 181,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-24",
+          "median": 210.65,
+          "lo": 189.029,
+          "hi": 224.4804,
+          "n": 190,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-31",
+          "median": 219.6167,
+          "lo": 205.1167,
+          "hi": 243.2833,
+          "n": 189,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-07",
+          "median": 224.0167,
+          "lo": 204.85,
+          "hi": 240.7856,
+          "n": 186,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-14",
+          "median": 200.1167,
+          "lo": 181.6088,
+          "hi": 216.6667,
+          "n": 209,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-21",
+          "median": 204.0667,
+          "lo": 184.0833,
+          "hi": 226.5917,
+          "n": 194,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-28",
+          "median": 202.0583,
+          "lo": 188.9723,
+          "hi": 223.6333,
+          "n": 230,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-05",
+          "median": 218.1667,
+          "lo": 206.7333,
+          "hi": 232.9679,
+          "n": 221,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-12",
+          "median": 217.3,
+          "lo": 201.8417,
+          "hi": 235.8167,
+          "n": 197,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-19",
+          "median": 199.5333,
+          "lo": 183.725,
+          "hi": 224.2977,
+          "n": 234,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-26",
+          "median": 215.5583,
+          "lo": 200.3329,
+          "hi": 229.1667,
+          "n": 192,
+          "tooFew": false
+        }
+      ],
+      "sites": [
+        {
+          "id": "site_nb_main",
+          "name": "Main Hospital",
+          "size": "large",
+          "n": 4999,
+          "median": 230.5667,
+          "lo": 226.3625,
+          "hi": 234.15,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_east",
+          "name": "Eastshore Imaging",
+          "size": "large",
+          "n": 1549,
+          "median": 169.4667,
+          "lo": 163.3658,
+          "hi": 174.2833,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_valley",
+          "name": "Valley Outpatient",
+          "size": "medium",
+          "n": 414,
+          "median": 192.075,
+          "lo": 184.3725,
+          "hi": 204.7917,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_hill",
+          "name": "Hillcrest Imaging",
+          "size": "small",
+          "n": 141,
+          "median": 228.4667,
+          "lo": 200.5667,
+          "hi": 245.9167,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_pine",
+          "name": "Pine Cove Clinic",
+          "size": "tiny",
+          "n": 0,
+          "median": null,
+          "lo": null,
+          "hi": null,
+          "tooFew": true
+        }
+      ],
+      "groupMedian": 213.1,
+      "heatmap": [
+        {
+          "dow": 0,
+          "hour": 0,
+          "median": 206.9333,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 1,
+          "median": 175.5833,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 2,
+          "median": 188.9083,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 3,
+          "median": 97.9833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 4,
+          "median": 118.4333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 5,
+          "median": 190.2667,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 6,
+          "median": 215.8167,
+          "n": 41,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 7,
+          "median": 311.075,
+          "n": 96,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 8,
+          "median": 317.1417,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 9,
+          "median": 270.175,
+          "n": 174,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 10,
+          "median": 228.8,
+          "n": 170,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 11,
+          "median": 231.8917,
+          "n": 138,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 12,
+          "median": 242.725,
+          "n": 130,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 13,
+          "median": 241.6833,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 14,
+          "median": 258.6083,
+          "n": 106,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 15,
+          "median": 272.9,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 16,
+          "median": 323.3667,
+          "n": 85,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 17,
+          "median": 282.225,
+          "n": 52,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 18,
+          "median": 242.325,
+          "n": 44,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 19,
+          "median": 173.8667,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 20,
+          "median": 233.9333,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 21,
+          "median": 249.3667,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 22,
+          "median": 229.4667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 23,
+          "median": 189.8083,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 0,
+          "median": 116.8833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 1,
+          "median": 167.9833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 2,
+          "median": 98.95,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 3,
+          "median": 85.1,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 4,
+          "median": 230.5417,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 5,
+          "median": 186.85,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 6,
+          "median": 158.675,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 7,
+          "median": 295.8833,
+          "n": 107,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 8,
+          "median": 266.0333,
+          "n": 127,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 9,
+          "median": 233.6083,
+          "n": 160,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 10,
+          "median": 226.9167,
+          "n": 125,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 11,
+          "median": 206.7833,
+          "n": 145,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 12,
+          "median": 198.5083,
+          "n": 122,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 13,
+          "median": 210.7667,
+          "n": 128,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 14,
+          "median": 217.175,
+          "n": 132,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 15,
+          "median": 238.7917,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 16,
+          "median": 254.175,
+          "n": 86,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 17,
+          "median": 223.9417,
+          "n": 40,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 18,
+          "median": 230.6333,
+          "n": 34,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 19,
+          "median": 130.0833,
+          "n": 31,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 20,
+          "median": 179.3833,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 21,
+          "median": 101.2667,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 22,
+          "median": 127.1083,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 23,
+          "median": 116.05,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 0,
+          "median": 154.3167,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 1,
+          "median": 189.1333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 2,
+          "median": 98.9667,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 3,
+          "median": 158.9167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 4,
+          "median": 142.4333,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 5,
+          "median": 112.4833,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 6,
+          "median": 194.2333,
+          "n": 31,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 7,
+          "median": 293.15,
+          "n": 84,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 8,
+          "median": 240.55,
+          "n": 125,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 9,
+          "median": 215.2,
+          "n": 133,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 10,
+          "median": 206.275,
+          "n": 128,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 11,
+          "median": 187.2,
+          "n": 115,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 12,
+          "median": 183.3,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 13,
+          "median": 208.2667,
+          "n": 106,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 14,
+          "median": 216.225,
+          "n": 106,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 15,
+          "median": 218.9417,
+          "n": 94,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 16,
+          "median": 274.0583,
+          "n": 68,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 17,
+          "median": 181.9,
+          "n": 55,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 18,
+          "median": 244.8167,
+          "n": 23,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 19,
+          "median": 111.4833,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 20,
+          "median": 147.1667,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 21,
+          "median": 190.975,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 22,
+          "median": 125.25,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 23,
+          "median": 104.05,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 0,
+          "median": 134.1667,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 1,
+          "median": 150.0833,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 2,
+          "median": 240.8833,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 3,
+          "median": 155.05,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 4,
+          "median": 95.95,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 5,
+          "median": 173.725,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 6,
+          "median": 192.8917,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 7,
+          "median": 250.9333,
+          "n": 87,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 8,
+          "median": 249.9667,
+          "n": 128,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 9,
+          "median": 218.3,
+          "n": 143,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 10,
+          "median": 191.4333,
+          "n": 107,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 11,
+          "median": 183.6167,
+          "n": 131,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 12,
+          "median": 185.4,
+          "n": 111,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 13,
+          "median": 190.0667,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 14,
+          "median": 200.7333,
+          "n": 93,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 15,
+          "median": 209.9333,
+          "n": 105,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 16,
+          "median": 213.9333,
+          "n": 73,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 17,
+          "median": 223.7667,
+          "n": 49,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 18,
+          "median": 219.8667,
+          "n": 49,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 19,
+          "median": 151.1833,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 20,
+          "median": 163.0917,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 21,
+          "median": 196.5333,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 22,
+          "median": 128.625,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 23,
+          "median": 136.4417,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 0,
+          "median": 141.5583,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 1,
+          "median": 167.25,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 2,
+          "median": 124.6583,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 3,
+          "median": 207.6667,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 4,
+          "median": 123.25,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 5,
+          "median": 143.3667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 6,
+          "median": 178.95,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 7,
+          "median": 262.7,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 8,
+          "median": 227.2833,
+          "n": 104,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 9,
+          "median": 188.3,
+          "n": 105,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 10,
+          "median": 192.0833,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 11,
+          "median": 175.3333,
+          "n": 103,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 12,
+          "median": 171.0417,
+          "n": 98,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 13,
+          "median": 186.1333,
+          "n": 76,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 14,
+          "median": 185.7667,
+          "n": 79,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 15,
+          "median": 189.25,
+          "n": 96,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 16,
+          "median": 231.3667,
+          "n": 56,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 17,
+          "median": 238.9333,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 18,
+          "median": 181.1,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 19,
+          "median": 138.9833,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 20,
+          "median": 120.1667,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 21,
+          "median": 133.3167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 22,
+          "median": 96.6,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 23,
+          "median": 120.4667,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 0,
+          "median": 73.5,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 2,
+          "median": 83.6333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 3,
+          "median": 39.1,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 5,
+          "median": 123.2667,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 6,
+          "median": 97.2167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 7,
+          "median": 196.0667,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 8,
+          "median": 148.1833,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 9,
+          "median": 130.8083,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 10,
+          "median": 110.7667,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 11,
+          "median": 122.5833,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 12,
+          "median": 130.5333,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 13,
+          "median": 119.6667,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 14,
+          "median": 133.35,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 15,
+          "median": 151.6917,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 16,
+          "median": 126.6667,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 17,
+          "median": 133.95,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 18,
+          "median": 197.6167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 19,
+          "median": 91.4667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 20,
+          "median": 102.9333,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 21,
+          "median": 168.7333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 23,
+          "median": 76.9,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 2,
+          "median": 97.8667,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 3,
+          "median": 109.8,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 4,
+          "median": 199.9333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 5,
+          "median": 336.05,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 6,
+          "median": 165.6,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 7,
+          "median": 107.3333,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 8,
+          "median": 139.0333,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 9,
+          "median": 153.95,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 10,
+          "median": 110.05,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 11,
+          "median": 91.0833,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 12,
+          "median": 131.15,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 13,
+          "median": 114.675,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 14,
+          "median": 134.5667,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 15,
+          "median": 133.9,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 16,
+          "median": 166.6583,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 17,
+          "median": 121.4833,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 18,
+          "median": 133.6333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 19,
+          "median": 93.4083,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 20,
+          "median": 74.35,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 21,
+          "median": 47.3167,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 23,
+          "median": 69.5333,
+          "n": 1,
+          "tooFew": true
+        }
+      ],
+      "boxes": [
+        {
+          "modality": "MRI",
+          "period": "after",
+          "n": 5278,
+          "p10": 11.1833,
+          "p25": 15.15,
+          "p50": 21.4,
+          "p75": 30.2667,
+          "p90": 42.5733,
+          "tooFew": false
+        },
+        {
+          "modality": "MRI",
+          "period": "before",
+          "n": 1825,
+          "p10": 13.3667,
+          "p25": 18.1833,
+          "p50": 25.2333,
+          "p75": 35.3167,
+          "p90": 49.29,
+          "tooFew": false
+        }
+      ],
+      "compare": {
+        "mode": "one",
+        "rawBefore": {
+          "value": 220.1167,
+          "lo": 214.5163,
+          "hi": 226.6667,
+          "n": 1825
+        },
+        "rawAfter": {
+          "value": 210.0833,
+          "lo": 207.225,
+          "hi": 214.3008,
+          "n": 5278
+        }
+      },
+      "ai": [
+        {
+          "specialty": "Neuro",
+          "accepted": 659,
+          "edited": 415,
+          "rejected": 175,
+          "n": 1249,
+          "tooFew": false
+        },
+        {
+          "specialty": "Spine",
+          "accepted": 720,
+          "edited": 345,
+          "rejected": 139,
+          "n": 1204,
+          "tooFew": false
+        },
+        {
+          "specialty": "MSK",
+          "accepted": 758,
+          "edited": 302,
+          "rejected": 130,
+          "n": 1190,
+          "tooFew": false
+        },
+        {
+          "specialty": "Abdomen",
+          "accepted": 731,
+          "edited": 310,
+          "rejected": 129,
+          "n": 1170,
+          "tooFew": false
+        }
+      ]
+    },
+    "XR": {
+      "weekly": [
+        {
+          "week": "2025-11-03",
+          "median": 30.65,
+          "lo": 28.9154,
+          "hi": 32.4517,
+          "n": 332,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-10",
+          "median": 30.7167,
+          "lo": 27.8813,
+          "hi": 33.0,
+          "n": 291,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-17",
+          "median": 29.4,
+          "lo": 27.6333,
+          "hi": 31.1667,
+          "n": 327,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-24",
+          "median": 29.9,
+          "lo": 28.4667,
+          "hi": 31.6333,
+          "n": 306,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-01",
+          "median": 30.2667,
+          "lo": 28.6667,
+          "hi": 31.9333,
+          "n": 343,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-08",
+          "median": 32.0667,
+          "lo": 30.1167,
+          "hi": 32.8333,
+          "n": 293,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-15",
+          "median": 30.55,
+          "lo": 27.6,
+          "hi": 33.3333,
+          "n": 329,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-22",
+          "median": 31.4,
+          "lo": 30.4167,
+          "hi": 33.3167,
+          "n": 319,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-29",
+          "median": 29.7333,
+          "lo": 27.4667,
+          "hi": 31.6708,
+          "n": 289,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-05",
+          "median": 31.8,
+          "lo": 30.15,
+          "hi": 33.2833,
+          "n": 328,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-12",
+          "median": 31.0333,
+          "lo": 28.699,
+          "hi": 32.8256,
+          "n": 304,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-19",
+          "median": 29.0083,
+          "lo": 27.3165,
+          "hi": 30.775,
+          "n": 340,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-26",
+          "median": 31.3,
+          "lo": 29.8317,
+          "hi": 33.25,
+          "n": 315,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-02",
+          "median": 30.1333,
+          "lo": 28.9327,
+          "hi": 32.426,
+          "n": 298,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-09",
+          "median": 30.6333,
+          "lo": 28.5667,
+          "hi": 32.7908,
+          "n": 279,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-16",
+          "median": 30.5917,
+          "lo": 29.2,
+          "hi": 33.3419,
+          "n": 316,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-23",
+          "median": 28.9,
+          "lo": 27.325,
+          "hi": 30.9,
+          "n": 312,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-02",
+          "median": 30.3167,
+          "lo": 28.3667,
+          "hi": 31.8208,
+          "n": 279,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-09",
+          "median": 29.8167,
+          "lo": 28.0333,
+          "hi": 31.0,
+          "n": 336,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-16",
+          "median": 30.25,
+          "lo": 28.8833,
+          "hi": 31.75,
+          "n": 331,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-23",
+          "median": 29.8667,
+          "lo": 28.4333,
+          "hi": 31.4346,
+          "n": 322,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-30",
+          "median": 30.8333,
+          "lo": 28.8167,
+          "hi": 32.2667,
+          "n": 315,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-06",
+          "median": 29.9833,
+          "lo": 27.9667,
+          "hi": 31.6333,
+          "n": 315,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-13",
+          "median": 31.8333,
+          "lo": 29.6404,
+          "hi": 34.0265,
+          "n": 308,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-20",
+          "median": 30.6167,
+          "lo": 28.4167,
+          "hi": 32.2,
+          "n": 297,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-27",
+          "median": 30.8333,
+          "lo": 28.9833,
+          "hi": 32.8104,
+          "n": 297,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-04",
+          "median": 28.5083,
+          "lo": 26.2,
+          "hi": 30.7333,
+          "n": 214,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-11",
+          "median": 28.575,
+          "lo": 26.25,
+          "hi": 31.1833,
+          "n": 206,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-18",
+          "median": 28.4167,
+          "lo": 26.7121,
+          "hi": 31.6558,
+          "n": 217,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-25",
+          "median": 28.95,
+          "lo": 26.05,
+          "hi": 32.05,
+          "n": 233,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-01",
+          "median": 27.375,
+          "lo": 24.65,
+          "hi": 29.675,
+          "n": 216,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-08",
+          "median": 27.6167,
+          "lo": 25.85,
+          "hi": 29.95,
+          "n": 195,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-15",
+          "median": 30.4,
+          "lo": 27.9,
+          "hi": 33.35,
+          "n": 233,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-22",
+          "median": 27.5667,
+          "lo": 26.2483,
+          "hi": 29.5419,
+          "n": 224,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-29",
+          "median": 27.7667,
+          "lo": 25.4654,
+          "hi": 29.8679,
+          "n": 194,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-06",
+          "median": 30.5333,
+          "lo": 28.2833,
+          "hi": 32.2333,
+          "n": 217,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-13",
+          "median": 27.9667,
+          "lo": 25.4833,
+          "hi": 29.55,
+          "n": 217,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-20",
+          "median": 27.4,
+          "lo": 25.6167,
+          "hi": 29.75,
+          "n": 219,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-27",
+          "median": 29.5833,
+          "lo": 27.3667,
+          "hi": 31.7167,
+          "n": 205,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-03",
+          "median": 27.1583,
+          "lo": 25.325,
+          "hi": 29.5167,
+          "n": 204,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-10",
+          "median": 28.5167,
+          "lo": 26.2583,
+          "hi": 31.4335,
+          "n": 202,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-17",
+          "median": 28.9667,
+          "lo": 27.6333,
+          "hi": 30.4721,
+          "n": 197,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-24",
+          "median": 28.0,
+          "lo": 25.9167,
+          "hi": 29.2667,
+          "n": 195,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-31",
+          "median": 27.6833,
+          "lo": 25.8333,
+          "hi": 30.3167,
+          "n": 213,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-07",
+          "median": 28.4,
+          "lo": 25.7667,
+          "hi": 29.65,
+          "n": 227,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-14",
+          "median": 26.975,
+          "lo": 24.8148,
+          "hi": 29.5,
+          "n": 220,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-21",
+          "median": 27.6583,
+          "lo": 26.1667,
+          "hi": 29.8667,
+          "n": 198,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-28",
+          "median": 28.6667,
+          "lo": 26.3833,
+          "hi": 31.65,
+          "n": 197,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-05",
+          "median": 28.4833,
+          "lo": 26.9,
+          "hi": 30.4833,
+          "n": 222,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-12",
+          "median": 29.4333,
+          "lo": 27.6,
+          "hi": 31.6833,
+          "n": 205,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-19",
+          "median": 28.5333,
+          "lo": 25.9667,
+          "hi": 30.6667,
+          "n": 206,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-26",
+          "median": 29.1167,
+          "lo": 27.5667,
+          "hi": 31.05,
+          "n": 182,
+          "tooFew": false
+        }
+      ],
+      "sites": [
+        {
+          "id": "site_nb_main",
+          "name": "Main Hospital",
+          "size": "large",
+          "n": 5334,
+          "median": 33.2333,
+          "lo": 32.7081,
+          "hi": 33.7835,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_east",
+          "name": "Eastshore Imaging",
+          "size": "large",
+          "n": 3795,
+          "median": 25.5833,
+          "lo": 25.1663,
+          "hi": 26.0,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_valley",
+          "name": "Valley Outpatient",
+          "size": "medium",
+          "n": 3062,
+          "median": 28.7833,
+          "lo": 28.2831,
+          "hi": 29.3167,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_hill",
+          "name": "Hillcrest Imaging",
+          "size": "small",
+          "n": 1368,
+          "median": 30.7583,
+          "lo": 30.1412,
+          "hi": 31.4921,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_pine",
+          "name": "Pine Cove Clinic",
+          "size": "tiny",
+          "n": 20,
+          "median": 29.3917,
+          "lo": null,
+          "hi": null,
+          "tooFew": true
+        }
+      ],
+      "groupMedian": 29.5833,
+      "heatmap": [
+        {
+          "dow": 0,
+          "hour": 0,
+          "median": 23.1167,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 1,
+          "median": 27.7667,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 2,
+          "median": 31.1833,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 3,
+          "median": 17.55,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 4,
+          "median": 28.8,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 5,
+          "median": 28.4,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 6,
+          "median": 26.1833,
+          "n": 66,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 7,
+          "median": 41.7833,
+          "n": 204,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 8,
+          "median": 41.9167,
+          "n": 294,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 9,
+          "median": 33.075,
+          "n": 304,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 10,
+          "median": 32.6,
+          "n": 287,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 11,
+          "median": 32.6833,
+          "n": 255,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 12,
+          "median": 33.85,
+          "n": 247,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 13,
+          "median": 34.1,
+          "n": 241,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 14,
+          "median": 34.175,
+          "n": 238,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 15,
+          "median": 35.275,
+          "n": 214,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 16,
+          "median": 39.4333,
+          "n": 180,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 17,
+          "median": 38.2833,
+          "n": 103,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 18,
+          "median": 35.7,
+          "n": 71,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 19,
+          "median": 32.8333,
+          "n": 45,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 20,
+          "median": 27.625,
+          "n": 30,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 21,
+          "median": 29.85,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 22,
+          "median": 29.0917,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 23,
+          "median": 24.825,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 0,
+          "median": 25.9167,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 1,
+          "median": 28.5083,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 2,
+          "median": 18.7333,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 3,
+          "median": 20.15,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 4,
+          "median": 23.5333,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 5,
+          "median": 17.925,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 6,
+          "median": 24.3333,
+          "n": 67,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 7,
+          "median": 36.3667,
+          "n": 176,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 8,
+          "median": 35.8667,
+          "n": 261,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 9,
+          "median": 32.75,
+          "n": 299,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 10,
+          "median": 28.9667,
+          "n": 249,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 11,
+          "median": 28.05,
+          "n": 213,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 12,
+          "median": 29.45,
+          "n": 211,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 13,
+          "median": 28.7667,
+          "n": 229,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 14,
+          "median": 30.9917,
+          "n": 252,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 15,
+          "median": 31.4333,
+          "n": 215,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 16,
+          "median": 35.7667,
+          "n": 161,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 17,
+          "median": 30.3,
+          "n": 99,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 18,
+          "median": 31.5,
+          "n": 51,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 19,
+          "median": 21.1917,
+          "n": 48,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 20,
+          "median": 22.7333,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 21,
+          "median": 21.8167,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 22,
+          "median": 23.85,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 23,
+          "median": 14.9333,
+          "n": 17,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 0,
+          "median": 21.4,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 1,
+          "median": 23.4833,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 2,
+          "median": 22.25,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 3,
+          "median": 17.6167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 4,
+          "median": 25.5917,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 5,
+          "median": 24.85,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 6,
+          "median": 20.9667,
+          "n": 61,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 7,
+          "median": 37.9833,
+          "n": 176,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 8,
+          "median": 34.2417,
+          "n": 264,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 9,
+          "median": 31.1833,
+          "n": 241,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 10,
+          "median": 28.3667,
+          "n": 213,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 11,
+          "median": 27.85,
+          "n": 222,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 12,
+          "median": 26.7167,
+          "n": 187,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 13,
+          "median": 28.4333,
+          "n": 215,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 14,
+          "median": 27.9333,
+          "n": 196,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 15,
+          "median": 28.4667,
+          "n": 191,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 16,
+          "median": 31.5667,
+          "n": 152,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 17,
+          "median": 32.5833,
+          "n": 93,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 18,
+          "median": 25.1667,
+          "n": 62,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 19,
+          "median": 20.6667,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 20,
+          "median": 22.4167,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 21,
+          "median": 24.5833,
+          "n": 23,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 22,
+          "median": 23.7333,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 23,
+          "median": 19.0417,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 0,
+          "median": 22.075,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 1,
+          "median": 15.6667,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 2,
+          "median": 26.5833,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 3,
+          "median": 18.9833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 4,
+          "median": 28.4333,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 5,
+          "median": 21.625,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 6,
+          "median": 22.225,
+          "n": 48,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 7,
+          "median": 34.2333,
+          "n": 175,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 8,
+          "median": 33.9333,
+          "n": 266,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 9,
+          "median": 29.5,
+          "n": 287,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 10,
+          "median": 25.0167,
+          "n": 247,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 11,
+          "median": 26.6,
+          "n": 195,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 12,
+          "median": 27.7167,
+          "n": 200,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 13,
+          "median": 28.3667,
+          "n": 181,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 14,
+          "median": 26.5333,
+          "n": 203,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 15,
+          "median": 29.4917,
+          "n": 184,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 16,
+          "median": 31.3,
+          "n": 159,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 17,
+          "median": 31.6,
+          "n": 80,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 18,
+          "median": 27.1083,
+          "n": 52,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 19,
+          "median": 23.7333,
+          "n": 37,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 20,
+          "median": 21.9,
+          "n": 41,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 21,
+          "median": 19.3333,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 22,
+          "median": 22.1,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 23,
+          "median": 15.9833,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 0,
+          "median": 17.8583,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 1,
+          "median": 26.8167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 2,
+          "median": 21.1833,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 3,
+          "median": 25.8917,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 4,
+          "median": 19.9167,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 5,
+          "median": 19.65,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 6,
+          "median": 22.5333,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 7,
+          "median": 33.35,
+          "n": 139,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 8,
+          "median": 31.9,
+          "n": 196,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 9,
+          "median": 28.4167,
+          "n": 264,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 10,
+          "median": 26.3167,
+          "n": 230,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 11,
+          "median": 25.15,
+          "n": 182,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 12,
+          "median": 27.025,
+          "n": 182,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 13,
+          "median": 26.2167,
+          "n": 182,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 14,
+          "median": 25.9333,
+          "n": 196,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 15,
+          "median": 28.6917,
+          "n": 166,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 16,
+          "median": 29.5167,
+          "n": 112,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 17,
+          "median": 32.1417,
+          "n": 88,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 18,
+          "median": 28.35,
+          "n": 35,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 19,
+          "median": 18.95,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 20,
+          "median": 21.8833,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 21,
+          "median": 20.1,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 22,
+          "median": 20.4,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 23,
+          "median": 16.9667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 0,
+          "median": 16.2583,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 1,
+          "median": 25.8833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 2,
+          "median": 23.0833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 3,
+          "median": 22.0833,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 4,
+          "median": 31.4333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 5,
+          "median": 36.4333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 6,
+          "median": 20.1833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 7,
+          "median": 27.8,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 8,
+          "median": 25.55,
+          "n": 41,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 9,
+          "median": 20.4833,
+          "n": 61,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 10,
+          "median": 21.1333,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 11,
+          "median": 22.1667,
+          "n": 44,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 12,
+          "median": 20.7333,
+          "n": 30,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 13,
+          "median": 18.8833,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 14,
+          "median": 22.2167,
+          "n": 39,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 15,
+          "median": 18.7417,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 5,
+          "hour": 16,
+          "median": 26.0,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 17,
+          "median": 21.8333,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 18,
+          "median": 16.6833,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 19,
+          "median": 25.4667,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 20,
+          "median": 15.5167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 21,
+          "median": 15.6833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 22,
+          "median": 26.6833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 23,
+          "median": 6.2333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 1,
+          "median": 6.55,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 2,
+          "median": 8.6,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 3,
+          "median": 18.7,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 4,
+          "median": 24.6167,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 5,
+          "median": 27.7833,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 6,
+          "median": 22.3833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 7,
+          "median": 25.2667,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 8,
+          "median": 21.8,
+          "n": 33,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 9,
+          "median": 23.55,
+          "n": 43,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 10,
+          "median": 21.75,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 11,
+          "median": 20.1917,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 12,
+          "median": 20.5667,
+          "n": 31,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 13,
+          "median": 19.7417,
+          "n": 32,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 14,
+          "median": 18.4583,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 15,
+          "median": 25.1333,
+          "n": 38,
+          "tooFew": false
+        },
+        {
+          "dow": 6,
+          "hour": 16,
+          "median": 22.4167,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 17,
+          "median": 22.7,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 18,
+          "median": 14.3167,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 19,
+          "median": 23.5833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 20,
+          "median": 25.9,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 21,
+          "median": 13.5667,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 22,
+          "median": 11.7333,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 23,
+          "median": 21.5833,
+          "n": 4,
+          "tooFew": true
+        }
+      ],
+      "boxes": [
+        {
+          "modality": "XR",
+          "period": "after",
+          "n": 5458,
+          "p10": 3.6167,
+          "p25": 4.9,
+          "p50": 6.85,
+          "p75": 9.6458,
+          "p90": 13.6767,
+          "tooFew": false
+        },
+        {
+          "modality": "XR",
+          "period": "before",
+          "n": 8121,
+          "p10": 4.65,
+          "p25": 6.1333,
+          "p50": 8.45,
+          "p75": 11.9667,
+          "p90": 16.4833,
+          "tooFew": false
+        }
+      ],
+      "compare": {
+        "mode": "one",
+        "rawBefore": {
+          "value": 30.5,
+          "lo": 30.1167,
+          "hi": 30.8167,
+          "n": 8121
+        },
+        "rawAfter": {
+          "value": 28.4167,
+          "lo": 28.0248,
+          "hi": 28.9333,
+          "n": 5458
+        }
+      },
+      "ai": [
+        {
+          "specialty": "Chest",
+          "accepted": 770,
+          "edited": 403,
+          "rejected": 146,
+          "n": 1319,
+          "tooFew": false
+        },
+        {
+          "specialty": "Spine",
+          "accepted": 775,
+          "edited": 350,
+          "rejected": 150,
+          "n": 1275,
+          "tooFew": false
+        },
+        {
+          "specialty": "Abdomen",
+          "accepted": 775,
+          "edited": 361,
+          "rejected": 136,
+          "n": 1272,
+          "tooFew": false
+        },
+        {
+          "specialty": "MSK",
+          "accepted": 743,
+          "edited": 326,
+          "rejected": 120,
+          "n": 1189,
+          "tooFew": false
+        }
+      ]
+    },
+    "US": {
+      "weekly": [
+        {
+          "week": "2025-11-03",
+          "median": 50.65,
+          "lo": 46.05,
+          "hi": 55.3667,
+          "n": 135,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-10",
+          "median": 49.8667,
+          "lo": 44.2333,
+          "hi": 55.5,
+          "n": 147,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-17",
+          "median": 51.0917,
+          "lo": 46.2165,
+          "hi": 53.6667,
+          "n": 130,
+          "tooFew": false
+        },
+        {
+          "week": "2025-11-24",
+          "median": 52.85,
+          "lo": 48.9833,
+          "hi": 57.3833,
+          "n": 141,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-01",
+          "median": 51.6333,
+          "lo": 45.8,
+          "hi": 54.6679,
+          "n": 135,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-08",
+          "median": 49.7333,
+          "lo": 44.65,
+          "hi": 54.7167,
+          "n": 147,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-15",
+          "median": 50.3833,
+          "lo": 47.3,
+          "hi": 54.1833,
+          "n": 165,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-22",
+          "median": 49.7667,
+          "lo": 44.8833,
+          "hi": 52.6004,
+          "n": 167,
+          "tooFew": false
+        },
+        {
+          "week": "2025-12-29",
+          "median": 51.7417,
+          "lo": 46.7235,
+          "hi": 56.4833,
+          "n": 132,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-05",
+          "median": 47.725,
+          "lo": 44.65,
+          "hi": 52.6235,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-12",
+          "median": 51.3,
+          "lo": 46.3567,
+          "hi": 57.7171,
+          "n": 154,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-19",
+          "median": 47.0333,
+          "lo": 42.2621,
+          "hi": 50.4333,
+          "n": 152,
+          "tooFew": false
+        },
+        {
+          "week": "2026-01-26",
+          "median": 50.75,
+          "lo": 45.306,
+          "hi": 57.4583,
+          "n": 150,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-02",
+          "median": 52.2833,
+          "lo": 46.2163,
+          "hi": 57.4185,
+          "n": 146,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-09",
+          "median": 51.4,
+          "lo": 46.8971,
+          "hi": 55.3167,
+          "n": 133,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-16",
+          "median": 51.7583,
+          "lo": 46.9244,
+          "hi": 56.4,
+          "n": 130,
+          "tooFew": false
+        },
+        {
+          "week": "2026-02-23",
+          "median": 51.4333,
+          "lo": 45.0917,
+          "hi": 57.0167,
+          "n": 134,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-02",
+          "median": 50.9833,
+          "lo": 47.0333,
+          "hi": 56.5,
+          "n": 143,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-09",
+          "median": 49.9917,
+          "lo": 42.45,
+          "hi": 54.2667,
+          "n": 134,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-16",
+          "median": 50.9667,
+          "lo": 43.525,
+          "hi": 55.0333,
+          "n": 136,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-23",
+          "median": 46.675,
+          "lo": 41.241,
+          "hi": 49.9667,
+          "n": 110,
+          "tooFew": false
+        },
+        {
+          "week": "2026-03-30",
+          "median": 47.4833,
+          "lo": 45.3,
+          "hi": 55.95,
+          "n": 121,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-06",
+          "median": 46.2667,
+          "lo": 41.3167,
+          "hi": 51.1167,
+          "n": 137,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-13",
+          "median": 50.8,
+          "lo": 44.4333,
+          "hi": 55.7,
+          "n": 147,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-20",
+          "median": 48.5167,
+          "lo": 43.0167,
+          "hi": 51.3667,
+          "n": 117,
+          "tooFew": false
+        },
+        {
+          "week": "2026-04-27",
+          "median": 52.7167,
+          "lo": 47.6333,
+          "hi": 57.3167,
+          "n": 143,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-04",
+          "median": 49.5167,
+          "lo": 46.4413,
+          "hi": 54.55,
+          "n": 95,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-11",
+          "median": 45.05,
+          "lo": 40.1167,
+          "hi": 51.5333,
+          "n": 105,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-18",
+          "median": 49.35,
+          "lo": 42.05,
+          "hi": 56.8833,
+          "n": 94,
+          "tooFew": false
+        },
+        {
+          "week": "2026-05-25",
+          "median": 41.125,
+          "lo": 33.6167,
+          "hi": 47.4667,
+          "n": 92,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-01",
+          "median": 50.9333,
+          "lo": 45.4913,
+          "hi": 55.2667,
+          "n": 111,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-08",
+          "median": 45.8333,
+          "lo": 41.3333,
+          "hi": 50.0333,
+          "n": 123,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-15",
+          "median": 48.6,
+          "lo": 45.3,
+          "hi": 51.0,
+          "n": 125,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-22",
+          "median": 42.9833,
+          "lo": 38.9167,
+          "hi": 48.4333,
+          "n": 117,
+          "tooFew": false
+        },
+        {
+          "week": "2026-06-29",
+          "median": 44.875,
+          "lo": 41.2523,
+          "hi": 48.5083,
+          "n": 110,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-06",
+          "median": 47.15,
+          "lo": 42.3,
+          "hi": 51.0667,
+          "n": 115,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-13",
+          "median": 47.0917,
+          "lo": 43.1829,
+          "hi": 52.5823,
+          "n": 114,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-20",
+          "median": 43.4583,
+          "lo": 39.6083,
+          "hi": 50.9083,
+          "n": 106,
+          "tooFew": false
+        },
+        {
+          "week": "2026-07-27",
+          "median": 46.6,
+          "lo": 42.35,
+          "hi": 48.8333,
+          "n": 109,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-03",
+          "median": 49.5583,
+          "lo": 45.2917,
+          "hi": 54.8346,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-10",
+          "median": 43.1667,
+          "lo": 40.4,
+          "hi": 47.1833,
+          "n": 111,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-17",
+          "median": 48.525,
+          "lo": 42.2833,
+          "hi": 54.7667,
+          "n": 104,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-24",
+          "median": 50.2833,
+          "lo": 41.3833,
+          "hi": 53.9667,
+          "n": 127,
+          "tooFew": false
+        },
+        {
+          "week": "2026-08-31",
+          "median": 47.75,
+          "lo": 44.2,
+          "hi": 55.2167,
+          "n": 103,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-07",
+          "median": 49.8167,
+          "lo": 45.8833,
+          "hi": 57.0833,
+          "n": 98,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-14",
+          "median": 44.4,
+          "lo": 41.2167,
+          "hi": 48.8333,
+          "n": 117,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-21",
+          "median": 45.8,
+          "lo": 42.7,
+          "hi": 51.65,
+          "n": 107,
+          "tooFew": false
+        },
+        {
+          "week": "2026-09-28",
+          "median": 54.7667,
+          "lo": 45.6,
+          "hi": 61.0333,
+          "n": 101,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-05",
+          "median": 44.8667,
+          "lo": 40.2833,
+          "hi": 54.4083,
+          "n": 94,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-12",
+          "median": 48.4667,
+          "lo": 44.25,
+          "hi": 51.75,
+          "n": 107,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-19",
+          "median": 45.1333,
+          "lo": 40.7667,
+          "hi": 48.4833,
+          "n": 101,
+          "tooFew": false
+        },
+        {
+          "week": "2026-10-26",
+          "median": 45.7833,
+          "lo": 40.85,
+          "hi": 52.5667,
+          "n": 102,
+          "tooFew": false
+        }
+      ],
+      "sites": [
+        {
+          "id": "site_nb_main",
+          "name": "Main Hospital",
+          "size": "large",
+          "n": 1803,
+          "median": 54.8333,
+          "lo": 53.35,
+          "hi": 56.3167,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_east",
+          "name": "Eastshore Imaging",
+          "size": "large",
+          "n": 1454,
+          "median": 41.3167,
+          "lo": 39.8906,
+          "hi": 42.5835,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_valley",
+          "name": "Valley Outpatient",
+          "size": "medium",
+          "n": 761,
+          "median": 46.25,
+          "lo": 44.7167,
+          "hi": 48.4342,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_hill",
+          "name": "Hillcrest Imaging",
+          "size": "small",
+          "n": 2396,
+          "median": 50.6417,
+          "lo": 49.5248,
+          "hi": 51.5758,
+          "tooFew": false
+        },
+        {
+          "id": "site_nb_pine",
+          "name": "Pine Cove Clinic",
+          "size": "tiny",
+          "n": 2,
+          "median": 57.65,
+          "lo": null,
+          "hi": null,
+          "tooFew": true
+        }
+      ],
+      "groupMedian": 48.5667,
+      "heatmap": [
+        {
+          "dow": 0,
+          "hour": 0,
+          "median": 34.4583,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 1,
+          "median": 38.45,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 2,
+          "median": 41.9333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 3,
+          "median": 37.9083,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 4,
+          "median": 46.9167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 5,
+          "median": 33.0,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 6,
+          "median": 46.8083,
+          "n": 36,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 7,
+          "median": 76.25,
+          "n": 114,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 8,
+          "median": 69.7333,
+          "n": 141,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 9,
+          "median": 61.2,
+          "n": 157,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 10,
+          "median": 56.8583,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 11,
+          "median": 54.9167,
+          "n": 111,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 12,
+          "median": 52.05,
+          "n": 119,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 13,
+          "median": 54.8167,
+          "n": 115,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 14,
+          "median": 57.3167,
+          "n": 127,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 15,
+          "median": 53.2333,
+          "n": 84,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 16,
+          "median": 65.7417,
+          "n": 94,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 17,
+          "median": 62.15,
+          "n": 59,
+          "tooFew": false
+        },
+        {
+          "dow": 0,
+          "hour": 18,
+          "median": 55.4,
+          "n": 24,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 19,
+          "median": 58.375,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 20,
+          "median": 40.975,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 21,
+          "median": 31.4167,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 22,
+          "median": 32.5333,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 0,
+          "hour": 23,
+          "median": 38.7833,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 0,
+          "median": 25.3667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 1,
+          "median": 25.7333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 2,
+          "median": 19.6333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 3,
+          "median": 41.3583,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 4,
+          "median": 18.5,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 5,
+          "median": 36.85,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 6,
+          "median": 41.3083,
+          "n": 34,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 7,
+          "median": 69.4,
+          "n": 95,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 8,
+          "median": 63.5167,
+          "n": 122,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 9,
+          "median": 51.3833,
+          "n": 126,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 10,
+          "median": 51.375,
+          "n": 116,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 11,
+          "median": 45.2333,
+          "n": 119,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 12,
+          "median": 50.45,
+          "n": 100,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 13,
+          "median": 46.6583,
+          "n": 92,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 14,
+          "median": 47.675,
+          "n": 104,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 15,
+          "median": 51.7,
+          "n": 110,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 16,
+          "median": 57.7,
+          "n": 85,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 17,
+          "median": 55.8917,
+          "n": 54,
+          "tooFew": false
+        },
+        {
+          "dow": 1,
+          "hour": 18,
+          "median": 46.625,
+          "n": 26,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 19,
+          "median": 34.4417,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 20,
+          "median": 31.8,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 21,
+          "median": 38.5333,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 22,
+          "median": 36.75,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 1,
+          "hour": 23,
+          "median": 33.1583,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 0,
+          "median": 24.8333,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 1,
+          "median": 34.35,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 2,
+          "median": 42.3167,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 3,
+          "median": 32.8083,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 4,
+          "median": 30.8,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 5,
+          "median": 33.35,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 6,
+          "median": 35.85,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 7,
+          "median": 57.8,
+          "n": 88,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 8,
+          "median": 57.2,
+          "n": 137,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 9,
+          "median": 49.9667,
+          "n": 149,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 10,
+          "median": 47.95,
+          "n": 117,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 11,
+          "median": 45.45,
+          "n": 108,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 12,
+          "median": 46.925,
+          "n": 96,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 13,
+          "median": 45.9417,
+          "n": 84,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 14,
+          "median": 44.1417,
+          "n": 88,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 15,
+          "median": 46.8667,
+          "n": 87,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 16,
+          "median": 44.9667,
+          "n": 62,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 17,
+          "median": 57.35,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 2,
+          "hour": 18,
+          "median": 48.8333,
+          "n": 29,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 19,
+          "median": 49.325,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 20,
+          "median": 27.5,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 21,
+          "median": 35.925,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 22,
+          "median": 27.1167,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 2,
+          "hour": 23,
+          "median": 30.0833,
+          "n": 6,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 0,
+          "median": 35.7167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 1,
+          "median": 28.3,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 2,
+          "median": 32.5333,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 3,
+          "median": 32.45,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 4,
+          "median": 31.3167,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 5,
+          "median": 50.6417,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 6,
+          "median": 37.4833,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 7,
+          "median": 60.85,
+          "n": 93,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 8,
+          "median": 53.3,
+          "n": 109,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 9,
+          "median": 54.0333,
+          "n": 95,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 10,
+          "median": 43.8667,
+          "n": 106,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 11,
+          "median": 45.3583,
+          "n": 90,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 12,
+          "median": 43.55,
+          "n": 103,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 13,
+          "median": 46.8,
+          "n": 87,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 14,
+          "median": 44.6,
+          "n": 105,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 15,
+          "median": 45.6083,
+          "n": 96,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 16,
+          "median": 44.1833,
+          "n": 63,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 17,
+          "median": 55.2833,
+          "n": 42,
+          "tooFew": false
+        },
+        {
+          "dow": 3,
+          "hour": 18,
+          "median": 47.75,
+          "n": 27,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 19,
+          "median": 35.6333,
+          "n": 11,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 20,
+          "median": 36.2667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 21,
+          "median": 31.2,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 22,
+          "median": 41.3083,
+          "n": 12,
+          "tooFew": true
+        },
+        {
+          "dow": 3,
+          "hour": 23,
+          "median": 35.4333,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 0,
+          "median": 39.7083,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 1,
+          "median": 25.0167,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 2,
+          "median": 19.8583,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 3,
+          "median": 33.1333,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 4,
+          "median": 45.95,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 5,
+          "median": 39.3833,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 6,
+          "median": 37.525,
+          "n": 20,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 7,
+          "median": 53.55,
+          "n": 66,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 8,
+          "median": 50.8667,
+          "n": 99,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 9,
+          "median": 46.2,
+          "n": 99,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 10,
+          "median": 41.5333,
+          "n": 100,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 11,
+          "median": 40.8,
+          "n": 113,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 12,
+          "median": 45.4,
+          "n": 83,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 13,
+          "median": 48.6167,
+          "n": 83,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 14,
+          "median": 41.7833,
+          "n": 90,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 15,
+          "median": 48.825,
+          "n": 64,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 16,
+          "median": 48.3333,
+          "n": 71,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 17,
+          "median": 44.65,
+          "n": 33,
+          "tooFew": false
+        },
+        {
+          "dow": 4,
+          "hour": 18,
+          "median": 41.65,
+          "n": 21,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 19,
+          "median": 41.6,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 20,
+          "median": 41.1833,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 21,
+          "median": 20.2417,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 22,
+          "median": 40.5167,
+          "n": 7,
+          "tooFew": true
+        },
+        {
+          "dow": 4,
+          "hour": 23,
+          "median": 26.425,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 0,
+          "median": 34.925,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 3,
+          "median": 25.6833,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 4,
+          "median": 21.3,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 6,
+          "median": 49.7667,
+          "n": 5,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 7,
+          "median": 25.9,
+          "n": 9,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 8,
+          "median": 33.0583,
+          "n": 26,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 9,
+          "median": 28.0,
+          "n": 28,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 10,
+          "median": 33.55,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 11,
+          "median": 38.1333,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 12,
+          "median": 27.95,
+          "n": 22,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 13,
+          "median": 29.7667,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 14,
+          "median": 35.5,
+          "n": 25,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 15,
+          "median": 32.0917,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 16,
+          "median": 43.5667,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 17,
+          "median": 28.6917,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 18,
+          "median": 53.1833,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 19,
+          "median": 21.9833,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 20,
+          "median": 20.325,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 5,
+          "hour": 21,
+          "median": 29.3333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 1,
+          "median": 17.75,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 2,
+          "median": 23.6167,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 4,
+          "median": 25.2417,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 5,
+          "median": 26.15,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 6,
+          "median": 34.8667,
+          "n": 2,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 7,
+          "median": 49.725,
+          "n": 14,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 8,
+          "median": 29.1667,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 9,
+          "median": 40.3833,
+          "n": 19,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 10,
+          "median": 23.65,
+          "n": 16,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 11,
+          "median": 30.7833,
+          "n": 15,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 12,
+          "median": 25.5,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 13,
+          "median": 28.9,
+          "n": 18,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 14,
+          "median": 30.525,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 15,
+          "median": 33.7667,
+          "n": 10,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 16,
+          "median": 38.2,
+          "n": 13,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 17,
+          "median": 38.2,
+          "n": 4,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 18,
+          "median": 27.7167,
+          "n": 8,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 19,
+          "median": 33.2833,
+          "n": 1,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 20,
+          "median": 46.5333,
+          "n": 3,
+          "tooFew": true
+        },
+        {
+          "dow": 6,
+          "hour": 23,
+          "median": 29.25,
+          "n": 3,
+          "tooFew": true
+        }
+      ],
+      "boxes": [
+        {
+          "modality": "US",
+          "period": "after",
+          "n": 2804,
+          "p10": 5.5217,
+          "p25": 7.5167,
+          "p50": 10.4333,
+          "p75": 14.7,
+          "p90": 20.8,
+          "tooFew": false
+        },
+        {
+          "modality": "US",
+          "period": "before",
+          "n": 3612,
+          "p10": 6.7,
+          "p25": 9.1667,
+          "p50": 12.5167,
+          "p75": 17.7542,
+          "p90": 24.6483,
+          "tooFew": false
+        }
+      ],
+      "compare": {
+        "mode": "one",
+        "rawBefore": {
+          "value": 50.0667,
+          "lo": 49.0913,
+          "hi": 50.9333,
+          "n": 3612
+        },
+        "rawAfter": {
+          "value": 46.7833,
+          "lo": 45.8333,
+          "hi": 47.5419,
+          "n": 2804
+        }
+      },
+      "ai": [
+        {
+          "specialty": "Breast",
+          "accepted": 615,
+          "edited": 208,
+          "rejected": 75,
+          "n": 898,
+          "tooFew": false
+        },
+        {
+          "specialty": "Pelvis",
+          "accepted": 497,
+          "edited": 257,
+          "rejected": 98,
+          "n": 852,
+          "tooFew": false
+        },
+        {
+          "specialty": "Abdomen",
+          "accepted": 505,
+          "edited": 254,
+          "rejected": 87,
+          "n": 846,
+          "tooFew": false
+        }
+      ]
+    }
+  }
+}

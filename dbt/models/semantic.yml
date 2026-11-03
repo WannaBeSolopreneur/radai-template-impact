@@ -1,0 +1,193 @@
+version: 2
+
+semantic_models:
+  - name: studies
+    description: >
+      One row per Northbay study in the metric window. Test fixtures are gone.
+      The last two days are gone because that feed is still loading.
+    model: ref('fct_studies_metric')
+    defaults:
+      agg_time_dimension: exam_completed_at
+    entities:
+      - name: study
+        type: primary
+        expr: study_id
+      - name: site
+        type: foreign
+        expr: site_id
+      - name: customer
+        type: foreign
+        expr: customer_id
+      - name: radiologist
+        type: foreign
+        expr: radiologist_id
+    dimensions:
+      - name: exam_completed_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: modality
+        type: categorical
+      - name: specialty
+        type: categorical
+      - name: priority
+        type: categorical
+      - name: period
+        type: categorical
+      - name: template_version
+        type: categorical
+      - name: site_name
+        type: categorical
+    measures:
+      - name: studies
+        description: Studies in the metric window.
+        agg: count
+        expr: study_id
+      - name: median_turnaround_minutes
+        description: Median minutes from exam completed to report signed.
+        agg: median
+        expr: turnaround_minutes
+      - name: median_time_on_report_minutes
+        description: Median minutes from report started to report signed.
+        agg: median
+        expr: time_on_report_minutes
+      - name: median_words
+        description: Median dictated words on the report.
+        agg: median
+        expr: words_dictated
+      - name: templates_used
+        description: Studies that used a template.
+        agg: sum
+        expr: used_template
+      - name: ai_accepted
+        description: AI impressions the radiologist accepted.
+        agg: sum
+        expr: is_ai_accepted
+      - name: ai_scored
+        description: Studies where AI produced an impression.
+        agg: sum
+        expr: is_ai_scored
+
+  - name: case_mix_change
+    description: >
+      One row per customer. Medians are compared inside each modality, then
+      weighted by the pre-launch mix. A negative change means faster.
+    model: ref('mart_case_mix_change')
+    defaults:
+      agg_time_dimension: launch_at
+    entities:
+      - name: customer
+        type: primary
+        expr: customer_id
+    dimensions:
+      - name: launch_at
+        type: time
+        type_params:
+          time_granularity: day
+    measures:
+      - name: adjusted_turnaround_change_minutes
+        description: Mix-adjusted change in median turnaround. Negative means faster.
+        agg: sum
+        expr: adjusted_change_minutes
+      - name: adjusted_report_change_minutes
+        description: Mix-adjusted change in median time on report. Negative means faster.
+        agg: sum
+        expr: adjusted_report_change_minutes
+      - name: raw_turnaround_change_minutes
+        description: Change in the raw median turnaround. This follows the case mix.
+        agg: sum
+        expr: raw_change_minutes
+
+metrics:
+  - name: study_count
+    label: Study count
+    description: Studies in the metric window after fixtures and the open days are removed.
+    type: simple
+    type_params:
+      measure: studies
+
+  - name: templates_used_count
+    label: Templates used
+    description: Studies that used a template.
+    type: simple
+    type_params:
+      measure: templates_used
+
+  - name: ai_accepted_count
+    label: AI impressions accepted
+    description: AI impressions the radiologist accepted.
+    type: simple
+    type_params:
+      measure: ai_accepted
+
+  - name: ai_scored_count
+    label: AI impressions scored
+    description: Studies where AI produced an impression.
+    type: simple
+    type_params:
+      measure: ai_scored
+
+  - name: median_report_turnaround
+    label: Median report turnaround
+    description: >
+      Median minutes from exam completed to report signed. The last two days
+      are excluded because they are still loading. A group with fewer than 30
+      studies is flagged and is not treated as a stable number.
+    type: simple
+    type_params:
+      measure: median_turnaround_minutes
+
+  - name: median_time_on_report
+    label: Median time on report
+    description: >
+      Median minutes from report started to report signed. This is the clock
+      the template can move. Queue time from the exam is not in this metric.
+    type: simple
+    type_params:
+      measure: median_time_on_report_minutes
+
+  - name: ai_impression_acceptance_rate
+    label: AI impression acceptance rate
+    description: >
+      Accepted AI impressions divided by impressions that were accepted, edited,
+      or rejected. Studies with no AI impression are not in the denominator.
+    type: ratio
+    type_params:
+      numerator: ai_accepted_count
+      denominator: ai_scored_count
+
+  - name: template_usage_rate
+    label: Template usage rate
+    description: Studies that used a template, divided by studies in the slice.
+    type: ratio
+    type_params:
+      numerator: templates_used_count
+      denominator: study_count
+
+  - name: words_dictated_per_report
+    label: Words dictated per report
+    description: Median dictated words on a signed report.
+    type: simple
+    type_params:
+      measure: median_words
+
+  - name: case_mix_adjusted_turnaround_change
+    label: Case-mix-adjusted turnaround change
+    description: >
+      Median turnaround after the launch minus median turnaround before it,
+      inside each modality, then weighted by the pre-launch modality mix.
+      A negative number means faster. The raw median is a different metric
+      and will follow a shift toward MRI.
+    type: simple
+    type_params:
+      measure: adjusted_turnaround_change_minutes
+
+  - name: case_mix_adjusted_time_on_report_change
+    label: Case-mix-adjusted time on report change
+    description: >
+      Same weight as the turnaround change, applied to median time on report.
+      This is the direct read on whether the templates saved dictation time.
+      A negative number means faster.
+    type: simple
+    type_params:
+      measure: adjusted_report_change_minutes
