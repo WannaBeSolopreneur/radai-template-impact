@@ -1,0 +1,151 @@
+# Synthetic behavior for Northbay Radiology Partners.
+# These rates, clocks, and mixes are assumptions for a fictional group.
+# They are not Rad AI measurements and they are not a real customer's results.
+# The generator reads this file. The dbt models do not hard-code these rates.
+
+seed: 20261103
+bootstrap_draws: 1000
+min_studies: 30
+
+# Featured customer. A second customer exists only so isolation tests have something to reject.
+customer_id: cust_northbay
+customer_name: Northbay Radiology Partners
+other_customer_id: cust_redcedar
+other_customer_name: Redcedar Imaging Alliance
+
+# Study window. The launch is the first Monday of the second half.
+# The last two days stay in the raw feed and drop out of every metric.
+window_start: "2025-11-03 00:00:00"
+window_end: "2026-11-02 18:00:00"
+launch_at: "2026-05-04 00:00:00"
+partial_start: "2026-11-01 00:00:00"
+as_of: "2026-11-03 00:00:00"
+
+# Four sites share the main sample. Pine Cove is added on top and stays under 30 studies.
+n_studies: 36000
+tiny_site_n: 24
+partial_studies: 90
+other_customer_studies: 5200
+
+# Weekday weights are Monday through Sunday. Hour weights are 0 through 23.
+# The partial days use the same shape but a much smaller count, like a feed that is still landing.
+weekday_weights: [1.22, 1.12, 1.06, 1.02, 0.90, 0.20, 0.16]
+hour_weights: [0.12, 0.08, 0.06, 0.06, 0.08, 0.14, 0.45, 1.35, 1.90, 2.05, 1.85, 1.70, 1.55, 1.60, 1.65, 1.50, 1.15, 0.75, 0.42, 0.28, 0.20, 0.16, 0.14, 0.12]
+
+# Queue time is the wait from exam completed to report started.
+# Report time is the time the radiologist spends from start to sign.
+# Templates change report time. They do not change the queue.
+# A shift toward MRI after launch makes a raw turnaround average look worse.
+modality_mix:
+  before: {CT: 0.25, MRI: 0.10, XR: 0.45, US: 0.20}
+  after: {CT: 0.24, MRI: 0.30, XR: 0.30, US: 0.16}
+
+# Specialty given modality. Each pair has an old and a new template in the seed catalog.
+specialties:
+  CT: [Neuro, Chest, Abdomen, Pelvis]
+  MRI: [Neuro, MSK, Abdomen, Spine]
+  XR: [MSK, Chest, Abdomen, Spine]
+  US: [Abdomen, Breast, Pelvis]
+
+# Site weights given modality, for the four large sites. Pine Cove is separate and mostly XR.
+site_weights:
+  CT: {site_nb_main: 0.62, site_nb_east: 0.24, site_nb_valley: 0.10, site_nb_hill: 0.04}
+  MRI: {site_nb_main: 0.70, site_nb_east: 0.22, site_nb_valley: 0.06, site_nb_hill: 0.02}
+  XR: {site_nb_main: 0.40, site_nb_east: 0.28, site_nb_valley: 0.22, site_nb_hill: 0.10}
+  US: {site_nb_main: 0.28, site_nb_east: 0.22, site_nb_valley: 0.12, site_nb_hill: 0.38}
+
+tiny_site_modality_weights: {CT: 0.08, MRI: 0.00, XR: 0.84, US: 0.08}
+
+# Median minutes for a lognormal draw. The median of the draw is the number below.
+queue_median_minutes: {CT: 46, MRI: 168, XR: 20, US: 34}
+report_median_minutes:
+  old: {CT: 17.5, MRI: 25.0, XR: 8.4, US: 12.6}
+  new: {CT: 14.0, MRI: 20.5, XR: 6.6, US: 10.0}
+queue_sigma: 0.40
+report_sigma: 0.48
+
+# A small share of studies get a much longer report. The median barely moves. The tail does.
+outlier_share: 0.035
+outlier_median_multiplier: 4.2
+outlier_sigma: 0.35
+
+# Multipliers on the queue median. Report time does not use these.
+site_queue_multiplier:
+  site_nb_main: 1.22
+  site_nb_east: 0.84
+  site_nb_valley: 1.00
+  site_nb_hill: 1.08
+  site_nb_pine: 0.92
+  site_rc_main: 1.05
+  site_rc_south: 0.96
+weekday_queue_multiplier: [1.28, 1.08, 1.00, 0.96, 0.90, 0.78, 0.72]
+hour_queue_multiplier: [0.85, 0.82, 0.80, 0.80, 0.84, 0.90, 1.05, 1.40, 1.32, 1.10, 1.00, 0.96, 0.98, 1.00, 1.02, 1.08, 1.22, 1.18, 1.05, 0.95, 0.90, 0.88, 0.86, 0.85]
+stat_queue_multiplier: 0.36
+stat_report_multiplier: 0.94
+
+# STAT is more common off hours and on weekends.
+stat_share_day: 0.14
+stat_share_off_hours: 0.40
+
+# Template adoption. Before the launch there is no new template.
+# After the launch most studies use the new template. Some stay on the old one. Some are free text.
+template_use:
+  before: {old: 0.76, none: 0.24}
+  after: {new: 0.83, old: 0.08, none: 0.09}
+
+# Median dictated words. New templates are a little shorter.
+words_median:
+  old: {CT: 175, MRI: 230, XR: 78, US: 118}
+  new: {CT: 154, MRI: 204, XR: 68, US: 104}
+words_sigma: 0.38
+
+# AI impression, given that AI produced one. A share of studies have no AI impression.
+ai_not_run_share: 0.08
+ai_rates:
+  old: {accepted: 0.46, edited: 0.36, rejected: 0.18}
+  new: {accepted: 0.63, edited: 0.27, rejected: 0.10}
+  none: {accepted: 0.41, edited: 0.38, rejected: 0.21}
+# Added to the accepted probability, then the three rates are rescaled.
+ai_specialty_accept_bonus:
+  Neuro: -0.06
+  Chest: 0.00
+  Abdomen: 0.02
+  Pelvis: 0.00
+  MSK: 0.03
+  Spine: -0.02
+  Breast: 0.07
+
+# Mess in the raw feed. Staging keeps the latest ingest and fills a blank modality
+# from the template. A population-wide clock skew is not applied. Moving a report
+# clock before the exam cannot be undone without eating the queue. The qa_chrono
+# fixture is five minutes early and staging slides that one report forward.
+mess:
+  duplicate_share: 0.02
+  blank_modality_share: 0.007
+  clock_skew_share: 0
+  clock_skew_minutes: 5
+  clock_skew_repair_max_minutes: 15
+
+# Radiologist counts by site. Labels are "Rad 01" style, not personal names.
+radiologists:
+  site_nb_main: 10
+  site_nb_east: 6
+  site_nb_valley: 4
+  site_nb_hill: 2
+  site_nb_pine: 1
+  site_rc_main: 6
+  site_rc_south: 2
+
+sites:
+  - {id: site_nb_main, customer: cust_northbay, name: Main Hospital, size: large, sort: 1}
+  - {id: site_nb_east, customer: cust_northbay, name: Eastshore Imaging, size: large, sort: 2}
+  - {id: site_nb_valley, customer: cust_northbay, name: Valley Outpatient, size: medium, sort: 3}
+  - {id: site_nb_hill, customer: cust_northbay, name: Hillcrest Imaging, size: small, sort: 4}
+  - {id: site_nb_pine, customer: cust_northbay, name: Pine Cove Clinic, size: tiny, sort: 5}
+  - {id: site_rc_main, customer: cust_redcedar, name: Redcedar General, size: large, sort: 1}
+  - {id: site_rc_south, customer: cust_redcedar, name: Redcedar South, size: small, sort: 2}
+
+# Redcedar is the isolation customer. Its mix does not matter to the page.
+other_customer:
+  site_weights: {site_rc_main: 0.78, site_rc_south: 0.22}
+  modality_weights: {CT: 0.30, MRI: 0.18, XR: 0.36, US: 0.16}

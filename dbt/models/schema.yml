@@ -1,0 +1,407 @@
+version: 2
+
+models:
+  - name: metric_time_spine
+    description: Daily calendar for the semantic layer. Not a customer table.
+    time_spine:
+      standard_granularity_column: date_day
+    columns:
+      - name: date_day
+        granularity: day
+        data_tests: [unique, not_null]
+
+  - name: stg_customers
+    description: One row per customer in the raw feed, including the customer used only for isolation tests.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: customer_name
+        data_tests: [not_null]
+
+  - name: stg_sites
+    description: Imaging sites. Pine Cove is the tiny site.
+    columns:
+      - name: site_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: size_band
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["large", "medium", "small", "tiny"]
+
+  - name: stg_radiologists
+    description: Synthetic radiologist labels. These are not personal names.
+    columns:
+      - name: radiologist_id
+        data_tests: [unique, not_null]
+      - name: site_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_sites')
+                field: site_id
+
+  - name: stg_generation_meta
+    description: One row of run settings written by the generator.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: launch_at
+        data_tests: [not_null]
+      - name: partial_start
+        data_tests: [not_null]
+
+  - name: stg_template_catalog
+    description: Old and new templates by modality and specialty.
+    columns:
+      - name: template_id
+        data_tests: [unique, not_null]
+      - name: modality
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["CT", "MRI", "XR", "US"]
+      - name: template_version
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["old", "new"]
+
+  - name: stg_studies
+    description: One row per study after the latest ingest wins. Clock skew under 15 minutes is shifted forward. Blank modality is filled from the template.
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: site_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_sites')
+                field: site_id
+      - name: radiologist_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_radiologists')
+                field: radiologist_id
+      - name: modality
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["CT", "MRI", "XR", "US"]
+      - name: priority
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["STAT", "routine"]
+      - name: template_version
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["old", "new"]
+      - name: template_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_template_catalog')
+                field: template_id
+              config:
+                where: "template_id is not null"
+      - name: ai_impression_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["accepted", "edited", "rejected"]
+      - name: exam_completed_at
+        data_tests: [not_null]
+      - name: report_started_at
+        data_tests: [not_null]
+      - name: report_signed_at
+        data_tests: [not_null]
+
+  - name: int_studies
+    description: Study spine for every customer, with clocks, period, and the partial-day flag. Test fixtures are still here so marts can prove they were removed.
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: period
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["before", "after"]
+      - name: turnaround_minutes
+        data_tests: [not_null]
+      - name: time_on_report_minutes
+        data_tests: [not_null]
+
+  - name: fct_studies
+    description: Northbay studies only. Test fixtures are excluded. Partial days remain, flagged, so the lag is visible.
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: site_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_site')
+                field: site_id
+      - name: radiologist_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_radiologist')
+                field: radiologist_id
+      - name: modality
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["CT", "MRI", "XR", "US"]
+      - name: priority
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["STAT", "routine"]
+      - name: period
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["before", "after"]
+      - name: is_test_fixture
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0]
+      - name: is_partial_period
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: fct_studies_metric
+    description: The population every headline metric uses. Partial days and fixtures are out.
+    columns:
+      - name: study_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: is_partial_period
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0]
+      - name: used_template
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: dim_customer
+    description: The one customer this build is allowed to publish.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+
+  - name: dim_site
+    description: Northbay sites that appear on the fact.
+    columns:
+      - name: site_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: size_band
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["large", "medium", "small", "tiny"]
+
+  - name: dim_radiologist
+    description: Northbay radiologist labels that appear on the fact.
+    columns:
+      - name: radiologist_id
+        data_tests: [unique, not_null]
+      - name: customer_id
+        data_tests: [not_null]
+
+  - name: mart_headline
+    description: One row of governed headline numbers for the featured customer.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: n_studies
+        data_tests: [not_null]
+      - name: raw_change_minutes
+        data_tests: [not_null]
+      - name: adjusted_change_minutes
+        data_tests: [not_null]
+      - name: adjusted_report_change_minutes
+        data_tests: [not_null]
+
+  - name: mart_case_mix_weights
+    description: Pre-launch modality shares. They sum to 1 and they are the fixed mix.
+    columns:
+      - name: modality
+        data_tests:
+          - not_null
+          - unique
+          - accepted_values:
+              arguments:
+                values: ["CT", "MRI", "XR", "US"]
+      - name: weight
+        data_tests: [not_null]
+      - name: customer_id
+        data_tests: [not_null]
+
+  - name: mart_case_mix_change
+    description: Raw change beside the mix-adjusted change. Negative means faster.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: adjusted_change_minutes
+        data_tests: [not_null]
+      - name: raw_change_minutes
+        data_tests: [not_null]
+
+  - name: mart_modality_period
+    description: Medians by modality and period, plus All and the full window.
+    columns:
+      - name: modality
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["All", "CT", "MRI", "XR", "US"]
+      - name: period
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["before", "after", "all"]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: n_studies
+        data_tests: [not_null]
+
+  - name: mart_weekly_turnaround
+    description: Weekly median turnaround, for All and for each modality.
+    columns:
+      - name: week_start
+        data_tests: [not_null]
+      - name: modality
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["All", "CT", "MRI", "XR", "US"]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: too_few_studies
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: mart_site_turnaround
+    description: Median turnaround by site. Pine Cove is flagged when n is under 30.
+    columns:
+      - name: site_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_site')
+                field: site_id
+      - name: customer_id
+        data_tests: [not_null]
+      - name: too_few_studies
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: mart_heatmap
+    description: Median turnaround by weekday and hour. Monday is 0.
+    columns:
+      - name: dow_index
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1, 2, 3, 4, 5, 6]
+      - name: exam_hour
+        data_tests: [not_null]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: too_few_studies
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+  - name: mart_modality_box
+    description: Percentile boxes for time on report. Whiskers on the page are p10 and p90.
+    columns:
+      - name: modality
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["CT", "MRI", "XR", "US"]
+      - name: period
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["before", "after"]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: p50
+        data_tests: [not_null]
+
+  - name: mart_ai_specialty
+    description: AI impression counts by specialty after the launch.
+    columns:
+      - name: specialty
+        data_tests: [not_null]
+      - name: ai_impression_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["accepted", "edited", "rejected"]
+      - name: customer_id
+        data_tests: [not_null]
+      - name: n_studies
+        data_tests: [not_null]
+
+  - name: mart_partial_period
+    description: How many Northbay studies sit in the two days that are still loading.
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+      - name: partial_studies
+        data_tests: [not_null]

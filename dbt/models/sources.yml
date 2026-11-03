@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Synthetic radiology feed loaded by rad_model.generate. Messy on purpose.
+    schema: raw
+    tables:
+      - name: customers
+      - name: sites
+      - name: radiologists
+      - name: studies
+      - name: generation_meta

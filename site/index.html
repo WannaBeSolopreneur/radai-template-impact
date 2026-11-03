@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Did the new templates actually help?</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <p class="kicker">Built for Rad AI by Asad Moulvi</p>
+      <h1>Did the new templates actually help?</h1>
+      <p class="synthetic">All data is synthetic. This is not Rad AI data.</p>
+    </header>
+
+    <section>
+      <h2>Problem</h2>
+      <p>Northbay Radiology Partners turned on new report templates on May 4, 2026 and asked if radiologists were actually finishing reports faster.</p>
+    </section>
+
+    <section>
+      <h2>Solution</h2>
+      <p>We compare each modality with itself, then weight those results by the old case mix, so a shift toward more MRI is not read as a change in speed.</p>
+      <div class="cards" id="cards"></div>
+      <p class="quiet" id="quiet"></p>
+    </section>
+
+    <section class="demo">
+      <div class="demo-head">
+        <h2>Demo</h2>
+        <label class="filter" for="modality">Modality
+          <select id="modality">
+            <option value="All">All</option>
+            <option value="CT">CT</option>
+            <option value="MRI">MRI</option>
+            <option value="XR">XR</option>
+            <option value="US">US</option>
+          </select>
+        </label>
+      </div>
+      <p class="quiet" id="showing"></p>
+
+      <figure class="panel">
+        <div class="fighead">
+          <div>
+            <h3>Weekly turnaround</h3>
+            <p class="caption" id="cap-trend"></p>
+          </div>
+          <span class="caveat">Last 2 days still loading, excluded.</span>
+        </div>
+        <div class="chart-box tall"><canvas id="trend"></canvas></div>
+      </figure>
+
+      <figure class="panel">
+        <div class="fighead">
+          <div>
+            <h3>Raw average vs same mix</h3>
+            <p class="caption" id="cap-compare"></p>
+          </div>
+          <span class="caveat">Last 2 days still loading, excluded.</span>
+        </div>
+        <div id="compare"></div>
+      </figure>
+
+      <figure class="panel">
+        <div class="fighead">
+          <div>
+            <h3>Weekday and hour</h3>
+            <p class="caption" id="cap-heat"></p>
+          </div>
+          <span class="caveat">Last 2 days still loading, excluded.</span>
+        </div>
+        <div class="heat-scroll" id="heat"></div>
+      </figure>
+
+      <div class="pair">
+        <figure class="panel">
+          <div class="fighead">
+            <div>
+              <h3>Sites vs the group</h3>
+              <p class="caption" id="cap-sites"></p>
+            </div>
+            <span class="caveat">Last 2 days still loading, excluded.</span>
+          </div>
+          <div class="chart-box"><canvas id="sites"></canvas></div>
+        </figure>
+
+        <figure class="panel">
+          <div class="fighead">
+            <div>
+              <h3>Time on the report</h3>
+              <p class="caption" id="cap-box"></p>
+            </div>
+            <span class="caveat">Last 2 days still loading, excluded.</span>
+          </div>
+          <div id="boxes"></div>
+        </figure>
+      </div>
+
+      <figure class="panel">
+        <div class="fighead">
+          <div>
+            <h3>AI impression after launch</h3>
+            <p class="caption" id="cap-ai"></p>
+          </div>
+          <span class="caveat">Last 2 days still loading, excluded.</span>
+        </div>
+        <div class="chart-box"><canvas id="ai"></canvas></div>
+      </figure>
+    </section>
+
+    <details id="how">
+      <summary>How it's built</summary>
+      <div class="how-body">
+        <p>The page reads tested marts. A group under 30 studies is marked too few studies and gets no interval. Intervals are a 95% percentile bootstrap with 1,000 resamples and seed 20261103.</p>
+        <ul>
+          <li>Median report turnaround is minutes from exam completed to signed.</li>
+          <li>Median time on the report is minutes from started to signed. Templates act here, not on the queue.</li>
+          <li>AI impression acceptance is accepted divided by accepted, edited, and rejected.</li>
+          <li>Template usage is the share of studies that used a template.</li>
+          <li id="words-note">Words dictated is the median word count.</li>
+          <li>The case mix change compares inside each modality, then weights by the pre-launch mix.</li>
+        </ul>
+        <p>Every customer mart keeps one customer. Test fixtures never land in a mart. The open two days stay out of the metric window.</p>
+        <pre>where customer_id = 'cust_northbay'
+  and is_test_fixture = 0
+  and is_partial_period = 0</pre>
+        <p>Definitions live in <code>dbt/models/semantic.yml</code>. A Snowflake row access policy example sits in <code>dbt/analyses</code> and is not executed on DuckDB.</p>
+      </div>
+    </details>
+
+    <section class="about">
+      <h2>About me</h2>
+      <p>Built by Asad Moulvi, Data Scientist at DataQHealth, where I build healthcare data pipelines that process 10M+ records a year.</p>
+      <p class="links">
+        <a href="https://github.com/WannaBeSolopreneur">GitHub</a>
+        <a href="https://www.linkedin.com/in/asad-moulvi-aaa278175">LinkedIn</a>
+        <a href="mailto:asad.moulvi01@gmail.com">asad.moulvi01@gmail.com</a>
+        <a href="https://github.com/WannaBeSolopreneur/radai-template-impact">See the code</a>
+      </p>
+    </section>
+
+    <footer>
+      <p class="synthetic">All data is synthetic. This is not Rad AI data.</p>
+    </footer>
+  </div>
+  <noscript><p class="wrap">Turn on JavaScript to draw the charts. The numbers come from site/data.js, which make all writes.</p></noscript>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script src="data.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>
